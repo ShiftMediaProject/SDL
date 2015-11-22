@@ -1,0 +1,632 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{e850f24d-093f-4c30-a99c-413a7dfa71b8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{f18cd969-acc3-480c-9147-ea3ae1c8ba92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{bdd0568e-d423-4fcc-affe-6ba0c2a40f78}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\events">
+      <UniqueIdentifier>{02a33859-3c14-4a58-8735-1ce16c89b0c0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio">
+      <UniqueIdentifier>{4356990e-fe58-463b-b94a-ca3c243a4e0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video">
+      <UniqueIdentifier>{ffc9ac7b-333c-4e52-8f56-466462e67366}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cdrom">
+      <UniqueIdentifier>{c6c30d77-142e-4f65-84a4-673f42b8f0ab}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cpuinfo">
+      <UniqueIdentifier>{5c297801-dc92-4e83-bfc0-b5d4bb204b18}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src">
+      <UniqueIdentifier>{171f7cda-98f8-4ef9-81d3-47842b533ca1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\cdrom">
+      <UniqueIdentifier>{b43fb16d-7244-48b9-afb6-3321b64b8811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio\windib">
+      <UniqueIdentifier>{46bbc74d-8bc5-4972-a8b7-9b9af89e7c35}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\file">
+      <UniqueIdentifier>{11a93cb7-1b3f-420e-b3f4-bb149fd2df3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\stdlib">
+      <UniqueIdentifier>{db264402-bfcd-4ed5-8f11-48a88121873d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread">
+      <UniqueIdentifier>{b534f147-4027-42f9-af65-67e6d5ef3648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\timer">
+      <UniqueIdentifier>{d3a4e7ed-7051-421b-9199-5ebce498ab36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick">
+      <UniqueIdentifier>{ae191095-9a1b-445a-bdd1-85941296532e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio\disk">
+      <UniqueIdentifier>{45147df7-0e64-4451-b1f4-e2af782c99bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio\dummy">
+      <UniqueIdentifier>{904555e7-e178-4529-9c2b-a4e5ff41da0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\wincommon">
+      <UniqueIdentifier>{4c17a259-fbfe-45df-a4f5-440beb6f4794}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\windib">
+      <UniqueIdentifier>{d1c3de06-b6c2-40bb-a7f0-74ed50328cdf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\windx5">
+      <UniqueIdentifier>{55f79e26-471d-4bd3-926a-90d2468fa3ba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio\windx5">
+      <UniqueIdentifier>{6d99e8ce-7bb8-41af-be50-93f961a57714}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick\win32">
+      <UniqueIdentifier>{f1e061a7-33cd-453a-b1ae-ac41e2b40de7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\cdrom\win32">
+      <UniqueIdentifier>{115fcfda-322a-40bf-9784-38d33d0fa6f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread\win32">
+      <UniqueIdentifier>{011afd2e-f74c-4e6c-bfcb-38991ed24255}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread\generic">
+      <UniqueIdentifier>{6e28d01f-875e-4ee6-9fe5-03ab574ca901}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\timer\win32">
+      <UniqueIdentifier>{3d131b66-aabe-41e5-842f-27b95d62052e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\loadso">
+      <UniqueIdentifier>{6a50f2f6-997c-4714-a446-3bad0efc679b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\loadso\win32">
+      <UniqueIdentifier>{c89c0950-0d85-4a43-b042-bbde3bb62eee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\audio">
+      <UniqueIdentifier>{5f1f619f-c130-43e4-8a95-c713f8160de2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\audio\disk">
+      <UniqueIdentifier>{0643c039-3393-4c36-b969-e5fa8e5d29ca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\audio\dummy">
+      <UniqueIdentifier>{8fc44a11-1c58-47f5-83e6-ce44af032d7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\audio\windib">
+      <UniqueIdentifier>{5b77000a-7300-465e-aa91-2e1da0cba8e1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\audio\windx5">
+      <UniqueIdentifier>{2d501c54-074f-4033-89b2-0c181b43d3e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\events">
+      <UniqueIdentifier>{a264834b-ff0c-435a-ad8e-327cd895da1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\joystick">
+      <UniqueIdentifier>{e3ead648-4518-40c5-b129-b65d4c3d4c28}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\timer">
+      <UniqueIdentifier>{fbbae27f-4d21-40e0-bab1-b6b489352c92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\thread">
+      <UniqueIdentifier>{7719a5d6-8aec-4705-955d-a1100ec0e988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\thread\win32">
+      <UniqueIdentifier>{c82cb8cf-f66f-4c58-b258-209fe556bfb8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video">
+      <UniqueIdentifier>{b561b60d-4c64-421d-a94b-70d417ac3e94}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\windx5">
+      <UniqueIdentifier>{d0ccbb27-7d78-4932-9b7a-28103c8568b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\windib">
+      <UniqueIdentifier>{a0d6c22e-7c71-496e-aaab-faa3e9f2944f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\wincommon">
+      <UniqueIdentifier>{5c45b925-901f-47c0-a4aa-76e0057e9b31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick\dummy">
+      <UniqueIdentifier>{d97f7378-a767-44c7-92a1-5e32684bd846}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\dummy">
+      <UniqueIdentifier>{299b78b8-4fe7-4a90-9f7a-db9fcd883b93}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\dummy">
+      <UniqueIdentifier>{78c4a4fd-1b9a-4332-b7c4-0b0ab8ba95c6}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\SDL_active.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_audio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_byteorder.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_cdrom.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_cpuinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_endian.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_events.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_getenv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_joystick.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_keyboard.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_keysym.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_loadso.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_main.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_mouse.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_mutex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_name.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_opengl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_quit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_rwops.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_stdinc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_syswm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_thread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_version.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_video.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\begin_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\close_code.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\events\SDL_sysevents.h">
+      <Filter>Source Files\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\events\SDL_events_c.h">
+      <Filter>Header Files\src\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\disk\SDL_diskaudio.h">
+      <Filter>Header Files\src\audio\disk</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\dummy\SDL_dummyaudio.h">
+      <Filter>Header Files\src\audio\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\windib\SDL_dibaudio.h">
+      <Filter>Header Files\src\audio\windib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\windx5\directx.h">
+      <Filter>Header Files\src\audio\windx5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\windx5\SDL_dx5audio.h">
+      <Filter>Header Files\src\audio\windx5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_audio_c.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_audiodev_c.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_audiomem.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_mixer_m68k.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_mixer_MMX.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_mixer_MMX_VC.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_sysaudio.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\SDL_wave.h">
+      <Filter>Header Files\src\audio</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\cdrom\SDL_syscdrom.h">
+      <Filter>Header Files\src\cdrom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\joystick\SDL_joystick_c.h">
+      <Filter>Header Files\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\joystick\SDL_sysjoystick.h">
+      <Filter>Header Files\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\timer\SDL_systimer.h">
+      <Filter>Header Files\src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\timer\SDL_timer_c.h">
+      <Filter>Header Files\src\timer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\thread\SDL_systhread.h">
+      <Filter>Header Files\src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\thread\SDL_thread_c.h">
+      <Filter>Header Files\src\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\thread\win32\SDL_systhread_c.h">
+      <Filter>Header Files\src\thread\win32</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windx5\directx.h">
+      <Filter>Header Files\src\video\windx5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windx5\SDL_dx5events_c.h">
+      <Filter>Header Files\src\video\windx5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windx5\SDL_dx5video.h">
+      <Filter>Header Files\src\video\windx5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windx5\SDL_dx5yuv_c.h">
+      <Filter>Header Files\src\video\windx5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windib\SDL_vkeys.h">
+      <Filter>Header Files\src\video\windib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windib\SDL_gapidibvideo.h">
+      <Filter>Header Files\src\video\windib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windib\SDL_dibvideo.h">
+      <Filter>Header Files\src\video\windib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windib\SDL_dibevents_c.h">
+      <Filter>Header Files\src\video\windib</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\wincommon\SDL_lowvideo.h">
+      <Filter>Header Files\src\video\wincommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\wincommon\SDL_sysmouse_c.h">
+      <Filter>Header Files\src\video\wincommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\wincommon\SDL_syswm_c.h">
+      <Filter>Header Files\src\video\wincommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\wincommon\SDL_wingl_c.h">
+      <Filter>Header Files\src\video\wincommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\wincommon\wmmsg.h">
+      <Filter>Header Files\src\video\wincommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\blank_cursor.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\default_cursor.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\e_log.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\e_pow.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\e_sqrt.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\math_private.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\mmx.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_blit.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_cursor_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_glfuncs.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_leaks.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_pixels_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_RLEaccel_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_stretch_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_sysvideo.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_yuv_sw_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_yuvfuncs.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SDL_error_c.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SDL_fatal.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\dummy\SDL_nullevents_c.h">
+      <Filter>Header Files\src\video\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\dummy\SDL_nullmouse_c.h">
+      <Filter>Header Files\src\video\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\dummy\SDL_nullvideo.h">
+      <Filter>Header Files\src\video\dummy</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\SDL.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SDL_error.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SDL_fatal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_audio.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_audiocvt.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_audiodev.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_mixer.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_mixer_m68k.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_mixer_MMX.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_mixer_MMX_VC.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\SDL_wave.c">
+      <Filter>Source Files\audio</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cdrom\SDL_cdrom.c">
+      <Filter>Source Files\cdrom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cpuinfo\SDL_cpuinfo.c">
+      <Filter>Source Files\cpuinfo</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_expose.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_keyboard.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_mouse.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_quit.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_resize.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_active.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_events.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\file\SDL_rwops.c">
+      <Filter>Source Files\file</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_qsort.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_stdlib.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_string.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_getenv.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_iconv.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_malloc.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread\SDL_thread.c">
+      <Filter>Source Files\thread</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\timer\SDL_timer.c">
+      <Filter>Source Files\timer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_pixels.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_RLEaccel.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_stretch.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_surface.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_video.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_yuv.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_yuv_mmx.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_yuv_sw.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_blit.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_blit_0.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_blit_1.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_blit_A.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_blit_N.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_bmp.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_cursor.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_gamma.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\SDL_joystick.c">
+      <Filter>Source Files\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\dummy\SDL_sysjoystick.c">
+      <Filter>Source Files\joystick\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\disk\SDL_diskaudio.c">
+      <Filter>Source Files\audio\disk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\dummy\SDL_dummyaudio.c">
+      <Filter>Source Files\audio\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\wincommon\SDL_sysevents.c">
+      <Filter>Source Files\video\wincommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\wincommon\SDL_sysmouse.c">
+      <Filter>Source Files\video\wincommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\wincommon\SDL_syswm.c">
+      <Filter>Source Files\video\wincommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\wincommon\SDL_wingl.c">
+      <Filter>Source Files\video\wincommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windib\SDL_dibvideo.c">
+      <Filter>Source Files\video\windib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windib\SDL_dibevents.c">
+      <Filter>Source Files\video\windib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windx5\SDL_dx5events.c">
+      <Filter>Source Files\video\windx5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windx5\SDL_dx5video.c">
+      <Filter>Source Files\video\windx5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windx5\SDL_dx5yuv.c">
+      <Filter>Source Files\video\windx5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\windib\SDL_dibaudio.c">
+      <Filter>Source Files\audio\windib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\windx5\SDL_dx5audio.c">
+      <Filter>Source Files\audio\windx5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\win32\SDL_mmjoystick.c">
+      <Filter>Source Files\joystick\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\cdrom\win32\SDL_syscdrom.c">
+      <Filter>Source Files\cdrom\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread\win32\SDL_sysmutex.c">
+      <Filter>Source Files\thread\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread\win32\SDL_syssem.c">
+      <Filter>Source Files\thread\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread\win32\SDL_systhread.c">
+      <Filter>Source Files\thread\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\thread\generic\SDL_syscond.c">
+      <Filter>Source Files\thread\generic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\timer\win32\SDL_systimer.c">
+      <Filter>Source Files\timer\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\loadso\win32\SDL_sysloadso.c">
+      <Filter>Source Files\loadso\win32</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\dummy\SDL_nullmouse.c">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\dummy\SDL_nullvideo.c">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\dummy\SDL_nullevents.c">
+      <Filter>Source Files\video\dummy</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="..\src\main\win32\version.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>
