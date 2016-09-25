@@ -43,171 +43,245 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\include\begin_code.h" />
-    <ClInclude Include="..\include\close_code.h" />
     <ClInclude Include="..\include\SDL.h" />
-    <ClInclude Include="..\include\SDL_active.h" />
+    <ClInclude Include="..\include\SDL_assert.h" />
+    <ClInclude Include="..\include\SDL_atomic.h" />
     <ClInclude Include="..\include\SDL_audio.h" />
-    <ClInclude Include="..\include\SDL_byteorder.h" />
-    <ClInclude Include="..\include\SDL_cdrom.h" />
+    <ClInclude Include="..\include\SDL_bits.h" />
+    <ClInclude Include="..\include\SDL_blendmode.h" />
+    <ClInclude Include="..\include\SDL_clipboard.h" />
+    <ClInclude Include="..\include\SDL_config.h" />
+    <ClInclude Include="..\include\SDL_config_windows.h" />
+    <ClInclude Include="..\include\SDL_copying.h" />
     <ClInclude Include="..\include\SDL_cpuinfo.h" />
     <ClInclude Include="..\include\SDL_endian.h" />
     <ClInclude Include="..\include\SDL_error.h" />
     <ClInclude Include="..\include\SDL_events.h" />
-    <ClInclude Include="..\include\SDL_getenv.h" />
+    <ClInclude Include="..\include\SDL_gesture.h" />
+    <ClInclude Include="..\include\SDL_haptic.h" />
+    <ClInclude Include="..\include\SDL_hints.h" />
     <ClInclude Include="..\include\SDL_joystick.h" />
     <ClInclude Include="..\include\SDL_keyboard.h" />
-    <ClInclude Include="..\include\SDL_keysym.h" />
+    <ClInclude Include="..\include\SDL_keycode.h" />
     <ClInclude Include="..\include\SDL_loadso.h" />
+    <ClInclude Include="..\include\SDL_log.h" />
     <ClInclude Include="..\include\SDL_main.h" />
     <ClInclude Include="..\include\SDL_mouse.h" />
     <ClInclude Include="..\include\SDL_mutex.h" />
     <ClInclude Include="..\include\SDL_name.h" />
     <ClInclude Include="..\include\SDL_opengl.h" />
+    <ClInclude Include="..\include\SDL_opengles.h" />
+    <ClInclude Include="..\include\SDL_pixels.h" />
     <ClInclude Include="..\include\SDL_platform.h" />
+    <ClInclude Include="..\include\SDL_power.h" />
     <ClInclude Include="..\include\SDL_quit.h" />
+    <ClInclude Include="..\include\SDL_rect.h" />
+    <ClInclude Include="..\include\SDL_render.h" />
+    <ClInclude Include="..\include\SDL_revision.h" />
     <ClInclude Include="..\include\SDL_rwops.h" />
+    <ClInclude Include="..\include\SDL_scancode.h" />
+    <ClInclude Include="..\include\SDL_shape.h" />
     <ClInclude Include="..\include\SDL_stdinc.h" />
+    <ClInclude Include="..\include\SDL_surface.h" />
+    <ClInclude Include="..\include\SDL_system.h" />
     <ClInclude Include="..\include\SDL_syswm.h" />
     <ClInclude Include="..\include\SDL_thread.h" />
     <ClInclude Include="..\include\SDL_timer.h" />
+    <ClInclude Include="..\include\SDL_touch.h" />
     <ClInclude Include="..\include\SDL_types.h" />
     <ClInclude Include="..\include\SDL_version.h" />
     <ClInclude Include="..\include\SDL_video.h" />
-    <ClInclude Include="..\src\audio\disk\SDL_diskaudio.h" />
-    <ClInclude Include="..\src\audio\dummy\SDL_dummyaudio.h" />
+    <ClInclude Include="..\include\SDL_gamecontroller.h" />
+    <ClInclude Include="..\src\core\windows\SDL_windows.h" />
+    <ClInclude Include="..\src\events\blank_cursor.h" />
+    <ClInclude Include="..\src\events\default_cursor.h" />
+    <ClInclude Include="..\src\audio\directsound\directx.h" />
+    <ClInclude Include="..\src\events\SDL_clipboardevents_c.h" />
+    <ClInclude Include="..\src\events\SDL_gesture_c.h" />
+    <ClInclude Include="..\src\events\SDL_touch_c.h" />
+    <ClInclude Include="..\src\joystick\windows\SDL_dxjoystick_c.h" />
+    <ClInclude Include="..\src\libm\math_libm.h" />
+    <ClInclude Include="..\src\libm\math_private.h" />
+    <ClInclude Include="..\src\render\mmx.h" />
+    <ClInclude Include="..\src\render\opengl\SDL_glfuncs.h" />
+    <ClInclude Include="..\src\render\opengl\SDL_shaders_gl.h" />
+    <ClInclude Include="..\src\render\SDL_sysrender.h" />
+    <ClInclude Include="..\src\render\SDL_yuv_sw_c.h" />
+    <ClInclude Include="..\src\audio\SDL_audio_c.h" />
     <ClInclude Include="..\src\audio\SDL_audiodev_c.h" />
     <ClInclude Include="..\src\audio\SDL_audiomem.h" />
-    <ClInclude Include="..\src\audio\SDL_audio_c.h" />
-    <ClInclude Include="..\src\audio\SDL_mixer_m68k.h" />
-    <ClInclude Include="..\src\audio\SDL_mixer_MMX.h" />
-    <ClInclude Include="..\src\audio\SDL_mixer_MMX_VC.h" />
-    <ClInclude Include="..\src\audio\SDL_sysaudio.h" />
-    <ClInclude Include="..\src\audio\SDL_wave.h" />
-    <ClInclude Include="..\src\audio\windib\SDL_dibaudio.h" />
-    <ClInclude Include="..\src\audio\windx5\directx.h" />
-    <ClInclude Include="..\src\audio\windx5\SDL_dx5audio.h" />
-    <ClInclude Include="..\src\cdrom\SDL_syscdrom.h" />
-    <ClInclude Include="..\src\events\SDL_events_c.h" />
-    <ClInclude Include="..\src\events\SDL_sysevents.h" />
-    <ClInclude Include="..\src\joystick\SDL_joystick_c.h" />
-    <ClInclude Include="..\src\joystick\SDL_sysjoystick.h" />
-    <ClInclude Include="..\src\SDL_error_c.h" />
-    <ClInclude Include="..\src\SDL_fatal.h" />
-    <ClInclude Include="..\src\thread\SDL_systhread.h" />
-    <ClInclude Include="..\src\thread\SDL_thread_c.h" />
-    <ClInclude Include="..\src\thread\win32\SDL_systhread_c.h" />
-    <ClInclude Include="..\src\timer\SDL_systimer.h" />
-    <ClInclude Include="..\src\timer\SDL_timer_c.h" />
-    <ClInclude Include="..\src\video\blank_cursor.h" />
-    <ClInclude Include="..\src\video\default_cursor.h" />
-    <ClInclude Include="..\src\video\dummy\SDL_nullevents_c.h" />
-    <ClInclude Include="..\src\video\dummy\SDL_nullmouse_c.h" />
-    <ClInclude Include="..\src\video\dummy\SDL_nullvideo.h" />
-    <ClInclude Include="..\src\video\e_log.h" />
-    <ClInclude Include="..\src\video\e_pow.h" />
-    <ClInclude Include="..\src\video\e_sqrt.h" />
-    <ClInclude Include="..\src\video\math_private.h" />
-    <ClInclude Include="..\src\video\mmx.h" />
+    <ClInclude Include="..\src\render\software\SDL_blendfillrect.h" />
+    <ClInclude Include="..\src\render\software\SDL_blendline.h" />
+    <ClInclude Include="..\src\render\software\SDL_blendpoint.h" />
+    <ClInclude Include="..\src\render\software\SDL_draw.h" />
+    <ClInclude Include="..\src\render\software\SDL_drawline.h" />
+    <ClInclude Include="..\src\render\software\SDL_drawpoint.h" />
+    <ClInclude Include="..\src\events\SDL_dropevents_c.h" />
+    <ClInclude Include="..\src\render\software\SDL_render_sw_c.h" />
+    <ClInclude Include="..\src\render\software\SDL_rotate.h" />
+    <ClInclude Include="..\src\SDL_assert_c.h" />
+    <ClInclude Include="..\src\video\dummy\SDL_nullframebuffer_c.h" />
     <ClInclude Include="..\src\video\SDL_blit.h" />
-    <ClInclude Include="..\src\video\SDL_cursor_c.h" />
-    <ClInclude Include="..\src\video\SDL_glfuncs.h" />
-    <ClInclude Include="..\src\video\SDL_leaks.h" />
+    <ClInclude Include="..\src\video\SDL_blit_auto.h" />
+    <ClInclude Include="..\src\video\SDL_blit_copy.h" />
+    <ClInclude Include="..\src\video\SDL_blit_slow.h" />
+    <ClInclude Include="..\src\video\SDL_shape_internals.h" />
+    <ClInclude Include="..\src\audio\winmm\SDL_winmm.h" />
+    <ClInclude Include="..\src\audio\disk\SDL_diskaudio.h" />
+    <ClInclude Include="..\src\audio\dummy\SDL_dummyaudio.h" />
+    <ClInclude Include="..\src\audio\directsound\SDL_directsound.h" />
+    <ClInclude Include="..\src\SDL_error_c.h" />
+    <ClInclude Include="..\src\events\SDL_events_c.h" />
+    <ClInclude Include="..\src\joystick\SDL_joystick_c.h" />
+    <ClInclude Include="..\src\events\SDL_keyboard_c.h" />
+    <ClInclude Include="..\src\events\SDL_mouse_c.h" />
+    <ClInclude Include="..\src\video\dummy\SDL_nullevents_c.h" />
+    <ClInclude Include="..\src\video\dummy\SDL_nullvideo.h" />
     <ClInclude Include="..\src\video\SDL_pixels_c.h" />
+    <ClInclude Include="..\src\video\SDL_rect_c.h" />
     <ClInclude Include="..\src\video\SDL_RLEaccel_c.h" />
-    <ClInclude Include="..\src\video\SDL_stretch_c.h" />
+    <ClInclude Include="..\src\audio\SDL_sysaudio.h" />
+    <ClInclude Include="..\src\events\SDL_sysevents.h" />
+    <ClInclude Include="..\src\haptic\SDL_syshaptic.h" />
+    <ClInclude Include="..\src\joystick\SDL_sysjoystick.h" />
+    <ClInclude Include="..\src\thread\SDL_systhread.h" />
+    <ClInclude Include="..\src\thread\windows\SDL_systhread_c.h" />
     <ClInclude Include="..\src\video\SDL_sysvideo.h" />
-    <ClInclude Include="..\src\video\SDL_yuvfuncs.h" />
-    <ClInclude Include="..\src\video\SDL_yuv_sw_c.h" />
-    <ClInclude Include="..\src\video\wincommon\SDL_lowvideo.h" />
-    <ClInclude Include="..\src\video\wincommon\SDL_sysmouse_c.h" />
-    <ClInclude Include="..\src\video\wincommon\SDL_syswm_c.h" />
-    <ClInclude Include="..\src\video\wincommon\SDL_wingl_c.h" />
-    <ClInclude Include="..\src\video\wincommon\wmmsg.h" />
-    <ClInclude Include="..\src\video\windib\SDL_dibevents_c.h" />
-    <ClInclude Include="..\src\video\windib\SDL_dibvideo.h" />
-    <ClInclude Include="..\src\video\windib\SDL_gapidibvideo.h" />
-    <ClInclude Include="..\src\video\windib\SDL_vkeys.h" />
-    <ClInclude Include="..\src\video\windx5\directx.h" />
-    <ClInclude Include="..\src\video\windx5\SDL_dx5events_c.h" />
-    <ClInclude Include="..\src\video\windx5\SDL_dx5video.h" />
-    <ClInclude Include="..\src\video\windx5\SDL_dx5yuv_c.h" />
+    <ClInclude Include="..\src\thread\SDL_thread_c.h" />
+    <ClInclude Include="..\src\timer\SDL_timer_c.h" />
+    <ClInclude Include="..\src\video\windows\SDL_vkeys.h" />
+    <ClInclude Include="..\src\audio\SDL_wave.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsclipboard.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsevents.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsframebuffer.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowskeyboard.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsmessagebox.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsmodes.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsmouse.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsopengl.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsshape.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsvideo.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowswindow.h" />
+    <ClInclude Include="..\src\events\SDL_windowevents_c.h" />
+    <ClInclude Include="..\src\video\windows\wmmsg.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\audio\disk\SDL_diskaudio.c" />
-    <ClCompile Include="..\src\audio\dummy\SDL_dummyaudio.c" />
+    <ClCompile Include="..\src\core\windows\SDL_windows.c" />
+    <ClCompile Include="..\src\events\SDL_clipboardevents.c" />
+    <ClCompile Include="..\src\events\SDL_gesture.c" />
+    <ClCompile Include="..\src\events\SDL_touch.c" />
+    <ClCompile Include="..\src\libm\e_atan2.c" />
+    <ClCompile Include="..\src\libm\e_log.c" />
+    <ClCompile Include="..\src\libm\e_pow.c" />
+    <ClCompile Include="..\src\libm\e_rem_pio2.c" />
+    <ClCompile Include="..\src\libm\e_sqrt.c" />
+    <ClCompile Include="..\src\libm\k_cos.c" />
+    <ClCompile Include="..\src\libm\k_rem_pio2.c" />
+    <ClCompile Include="..\src\libm\k_sin.c" />
+    <ClCompile Include="..\src\libm\s_atan.c" />
+    <ClCompile Include="..\src\libm\s_copysign.c" />
+    <ClCompile Include="..\src\libm\s_cos.c" />
+    <ClCompile Include="..\src\libm\s_fabs.c" />
+    <ClCompile Include="..\src\libm\s_floor.c" />
+    <ClCompile Include="..\src\libm\s_scalbn.c" />
+    <ClCompile Include="..\src\libm\s_sin.c" />
+    <ClCompile Include="..\src\render\direct3d\SDL_render_d3d.c" />
+    <ClCompile Include="..\src\render\opengl\SDL_render_gl.c" />
+    <ClCompile Include="..\src\render\opengl\SDL_shaders_gl.c" />
+    <ClCompile Include="..\src\render\SDL_render.c" />
+    <ClCompile Include="..\src\render\SDL_yuv_mmx.c" />
+    <ClCompile Include="..\src\render\SDL_yuv_sw.c" />
+    <ClCompile Include="..\src\render\software\SDL_blendfillrect.c" />
+    <ClCompile Include="..\src\render\software\SDL_blendline.c" />
+    <ClCompile Include="..\src\render\software\SDL_blendpoint.c" />
+    <ClCompile Include="..\src\render\software\SDL_drawline.c" />
+    <ClCompile Include="..\src\render\software\SDL_drawpoint.c" />
+    <ClCompile Include="..\src\render\software\SDL_render_sw.c" />
+    <ClCompile Include="..\src\render\software\SDL_rotate.c" />
+    <ClCompile Include="..\src\SDL.c" />
+    <ClCompile Include="..\src\SDL_assert.c" />
+    <ClCompile Include="..\src\atomic\SDL_atomic.c" />
+    <ClCompile Include="..\src\atomic\SDL_spinlock.c" />
     <ClCompile Include="..\src\audio\SDL_audio.c" />
     <ClCompile Include="..\src\audio\SDL_audiocvt.c" />
     <ClCompile Include="..\src\audio\SDL_audiodev.c" />
-    <ClCompile Include="..\src\audio\SDL_mixer.c" />
-    <ClCompile Include="..\src\audio\SDL_mixer_m68k.c" />
-    <ClCompile Include="..\src\audio\SDL_mixer_MMX.c" />
-    <ClCompile Include="..\src\audio\SDL_mixer_MMX_VC.c" />
-    <ClCompile Include="..\src\audio\SDL_wave.c" />
-    <ClCompile Include="..\src\audio\windib\SDL_dibaudio.c" />
-    <ClCompile Include="..\src\audio\windx5\SDL_dx5audio.c" />
-    <ClCompile Include="..\src\cdrom\SDL_cdrom.c" />
-    <ClCompile Include="..\src\cdrom\win32\SDL_syscdrom.c" />
-    <ClCompile Include="..\src\cpuinfo\SDL_cpuinfo.c" />
-    <ClCompile Include="..\src\events\SDL_active.c" />
-    <ClCompile Include="..\src\events\SDL_events.c" />
-    <ClCompile Include="..\src\events\SDL_expose.c" />
-    <ClCompile Include="..\src\events\SDL_keyboard.c" />
-    <ClCompile Include="..\src\events\SDL_mouse.c" />
-    <ClCompile Include="..\src\events\SDL_quit.c" />
-    <ClCompile Include="..\src\events\SDL_resize.c" />
-    <ClCompile Include="..\src\file\SDL_rwops.c" />
-    <ClCompile Include="..\src\joystick\dummy\SDL_sysjoystick.c" />
-    <ClCompile Include="..\src\joystick\SDL_joystick.c" />
-    <ClCompile Include="..\src\joystick\win32\SDL_mmjoystick.c" />
-    <ClCompile Include="..\src\loadso\win32\SDL_sysloadso.c" />
-    <ClCompile Include="..\src\SDL.c" />
-    <ClCompile Include="..\src\SDL_error.c" />
-    <ClCompile Include="..\src\SDL_fatal.c" />
-    <ClCompile Include="..\src\stdlib\SDL_getenv.c" />
-    <ClCompile Include="..\src\stdlib\SDL_iconv.c" />
-    <ClCompile Include="..\src\stdlib\SDL_malloc.c" />
-    <ClCompile Include="..\src\stdlib\SDL_qsort.c" />
-    <ClCompile Include="..\src\stdlib\SDL_stdlib.c" />
-    <ClCompile Include="..\src\stdlib\SDL_string.c" />
-    <ClCompile Include="..\src\thread\generic\SDL_syscond.c" />
-    <ClCompile Include="..\src\thread\SDL_thread.c" />
-    <ClCompile Include="..\src\thread\win32\SDL_sysmutex.c" />
-    <ClCompile Include="..\src\thread\win32\SDL_syssem.c" />
-    <ClCompile Include="..\src\thread\win32\SDL_systhread.c" />
-    <ClCompile Include="..\src\timer\SDL_timer.c" />
-    <ClCompile Include="..\src\timer\win32\SDL_systimer.c" />
-    <ClCompile Include="..\src\video\dummy\SDL_nullevents.c" />
-    <ClCompile Include="..\src\video\dummy\SDL_nullmouse.c" />
-    <ClCompile Include="..\src\video\dummy\SDL_nullvideo.c" />
+    <ClCompile Include="..\src\audio\SDL_audiotypecvt.c" />
+    <ClCompile Include="..\src\SDL_hints.c" />
+    <ClCompile Include="..\src\SDL_log.c" />
+    <ClCompile Include="..\src\video\dummy\SDL_nullframebuffer.c" />
     <ClCompile Include="..\src\video\SDL_blit.c" />
     <ClCompile Include="..\src\video\SDL_blit_0.c" />
     <ClCompile Include="..\src\video\SDL_blit_1.c" />
     <ClCompile Include="..\src\video\SDL_blit_A.c" />
+    <ClCompile Include="..\src\video\SDL_blit_auto.c" />
+    <ClCompile Include="..\src\video\SDL_blit_copy.c" />
     <ClCompile Include="..\src\video\SDL_blit_N.c" />
+    <ClCompile Include="..\src\video\SDL_blit_slow.c" />
     <ClCompile Include="..\src\video\SDL_bmp.c" />
-    <ClCompile Include="..\src\video\SDL_cursor.c" />
-    <ClCompile Include="..\src\video\SDL_gamma.c" />
+    <ClCompile Include="..\src\cpuinfo\SDL_cpuinfo.c" />
+    <ClCompile Include="..\src\video\SDL_clipboard.c" />
+    <ClCompile Include="..\src\video\SDL_shape.c" />
+    <ClCompile Include="..\src\audio\winmm\SDL_winmm.c" />
+    <ClCompile Include="..\src\audio\disk\SDL_diskaudio.c" />
+    <ClCompile Include="..\src\audio\dummy\SDL_dummyaudio.c" />
+    <ClCompile Include="..\src\audio\directsound\SDL_directsound.c" />
+    <ClCompile Include="..\src\events\SDL_dropevents.c" />
+    <ClCompile Include="..\src\audio\xaudio2\SDL_xaudio2.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_dxjoystick.c" />
+    <ClCompile Include="..\src\SDL_error.c" />
+    <ClCompile Include="..\src\events\SDL_events.c" />
+    <ClCompile Include="..\src\video\SDL_fillrect.c" />
+    <ClCompile Include="..\src\stdlib\SDL_getenv.c" />
+    <ClCompile Include="..\src\haptic\SDL_haptic.c" />
+    <ClCompile Include="..\src\stdlib\SDL_iconv.c" />
+    <ClCompile Include="..\src\joystick\SDL_joystick.c" />
+    <ClCompile Include="..\src\events\SDL_keyboard.c" />
+    <ClCompile Include="..\src\stdlib\SDL_malloc.c" />
+    <ClCompile Include="..\src\audio\SDL_mixer.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_mmjoystick.c" />
+    <ClCompile Include="..\src\events\SDL_mouse.c" />
+    <ClCompile Include="..\src\video\dummy\SDL_nullevents.c" />
+    <ClCompile Include="..\src\video\dummy\SDL_nullvideo.c" />
     <ClCompile Include="..\src\video\SDL_pixels.c" />
+    <ClCompile Include="..\src\power\SDL_power.c" />
+    <ClCompile Include="..\src\stdlib\SDL_qsort.c" />
+    <ClCompile Include="..\src\events\SDL_quit.c" />
+    <ClCompile Include="..\src\video\SDL_rect.c" />
     <ClCompile Include="..\src\video\SDL_RLEaccel.c" />
+    <ClCompile Include="..\src\file\SDL_rwops.c" />
+    <ClCompile Include="..\src\stdlib\SDL_stdlib.c" />
     <ClCompile Include="..\src\video\SDL_stretch.c" />
+    <ClCompile Include="..\src\stdlib\SDL_string.c" />
     <ClCompile Include="..\src\video\SDL_surface.c" />
+    <ClCompile Include="..\src\thread\generic\SDL_syscond.c" />
+    <ClCompile Include="..\src\haptic\windows\SDL_syshaptic.c" />
+    <ClCompile Include="..\src\loadso\windows\SDL_sysloadso.c" />
+    <ClCompile Include="..\src\thread\windows\SDL_sysmutex.c" />
+    <ClCompile Include="..\src\power\windows\SDL_syspower.c" />
+    <ClCompile Include="..\src\thread\windows\SDL_syssem.c" />
+    <ClCompile Include="..\src\thread\windows\SDL_systhread.c" />
+    <ClCompile Include="..\src\thread\windows\SDL_systls.c" />
+    <ClCompile Include="..\src\timer\windows\SDL_systimer.c" />
+    <ClCompile Include="..\src\thread\SDL_thread.c" />
+    <ClCompile Include="..\src\timer\SDL_timer.c" />
     <ClCompile Include="..\src\video\SDL_video.c" />
-    <ClCompile Include="..\src\video\SDL_yuv.c" />
-    <ClCompile Include="..\src\video\SDL_yuv_mmx.c" />
-    <ClCompile Include="..\src\video\SDL_yuv_sw.c" />
-    <ClCompile Include="..\src\video\wincommon\SDL_sysevents.c" />
-    <ClCompile Include="..\src\video\wincommon\SDL_sysmouse.c" />
-    <ClCompile Include="..\src\video\wincommon\SDL_syswm.c" />
-    <ClCompile Include="..\src\video\wincommon\SDL_wingl.c" />
-    <ClCompile Include="..\src\video\windib\SDL_dibevents.c" />
-    <ClCompile Include="..\src\video\windib\SDL_dibvideo.c" />
-    <ClCompile Include="..\src\video\windx5\SDL_dx5events.c" />
-    <ClCompile Include="..\src\video\windx5\SDL_dx5video.c" />
-    <ClCompile Include="..\src\video\windx5\SDL_dx5yuv.c" />
+    <ClCompile Include="..\src\audio\SDL_wave.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsclipboard.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsevents.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsframebuffer.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowskeyboard.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsmessagebox.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsmodes.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsmouse.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsopengl.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsshape.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsvideo.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowswindow.c" />
+    <ClCompile Include="..\src\events\SDL_windowevents.c" />
+    <ClCompile Include="..\src\joystick\SDL_gamecontroller.c" />
   </ItemGroup>
   <ItemGroup>
-    <ResourceCompile Include="..\src\main\win32\version.rc">
+    <ResourceCompile Include="..\src\main\windows\version.rc">
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseLTO'">true</ExcludedFromBuild>
@@ -215,7 +289,7 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{D82A9F8C-D671-4D9B-AE40-13CC6098AE69}</ProjectGuid>
-    <RootNamespace>libsdl</RootNamespace>
+    <RootNamespace>libsdl2</RootNamespace>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -327,25 +401,25 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>libsdld</TargetName>
+    <TargetName>libsdl2d</TargetName>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>libsdld</TargetName>
+    <TargetName>libsdl2d</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>sdld</TargetName>
+    <TargetName>sdl2d</TargetName>
     <LinkIncremental>false</LinkIncremental>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>sdld</TargetName>
+    <TargetName>sdl2d</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <LinkIncremental>false</LinkIncremental>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
@@ -353,36 +427,36 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>libsdl</TargetName>
+    <TargetName>libsdl2</TargetName>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>libsdl</TargetName>
+    <TargetName>libsdl2</TargetName>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>libsdl</TargetName>
+    <TargetName>libsdl2</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseLTO|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>libsdl</TargetName>
+    <TargetName>libsdl2</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>sdl</TargetName>
+    <TargetName>sdl2</TargetName>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
     <IntDir>$(SolutionDir)obj\$(Configuration)\$(Platform)\$(ProjectName)\</IntDir>
-    <TargetName>sdl</TargetName>
+    <TargetName>sdl2</TargetName>
     <OutDir>$(ProjectDir)..\..\..\msvc\</OutDir>
     <CustomBuildAfterTargets>Clean</CustomBuildAfterTargets>
   </PropertyGroup>
@@ -392,8 +466,8 @@
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -403,20 +477,17 @@
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -442,8 +513,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -453,20 +524,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -492,9 +560,9 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>true</BufferSecurityCheck>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -505,20 +573,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -544,8 +609,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -555,20 +620,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -604,8 +666,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -618,20 +680,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -667,8 +726,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -681,20 +740,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -730,8 +786,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -744,20 +800,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -793,8 +846,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -807,20 +860,17 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -856,8 +906,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -869,21 +919,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x86\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
@@ -919,8 +966,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\include;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -931,21 +978,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
-      <AdditionalDependencies>winmm.lib;dxguid.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist ..\include\SDL_config.h (
-del ..\include\SDL_config.h
-)
+      <Command>
 if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
