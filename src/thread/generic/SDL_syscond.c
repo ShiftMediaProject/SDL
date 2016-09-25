@@ -1,23 +1,22 @@
 /*
-    SDL - Simple DirectMedia Layer
-    Copyright (C) 1997-2012 Sam Lantinga
+  Simple DirectMedia Layer
+  Copyright (C) 1997-2013 Sam Lantinga <slouken@libsdl.org>
 
-    This library is free software; you can redistribute it and/or
-    modify it under the terms of the GNU Lesser General Public
-    License as published by the Free Software Foundation; either
-    version 2.1 of the License, or (at your option) any later version.
+  This software is provided 'as-is', without any express or implied
+  warranty.  In no event will the authors be held liable for any damages
+  arising from the use of this software.
 
-    This library is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-    Lesser General Public License for more details.
+  Permission is granted to anyone to use this software for any purpose,
+  including commercial applications, and to alter it and redistribute it
+  freely, subject to the following restrictions:
 
-    You should have received a copy of the GNU Lesser General Public
-    License along with this library; if not, write to the Free Software
-    Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
-
-    Sam Lantinga
-    slouken@libsdl.org
+  1. The origin of this software must not be misrepresented; you must not
+     claim that you wrote the original software. If you use this software
+     in a product, an acknowledgment in the product documentation would be
+     appreciated but is not required.
+  2. Altered source versions must be plainly marked as such, and must not be
+     misrepresented as being the original software.
+  3. This notice may not be removed or altered from any source distribution.
 */
 #include "SDL_config.h"
 
@@ -31,107 +30,109 @@
 
 struct SDL_cond
 {
-	SDL_mutex *lock;
-	int waiting;
-	int signals;
-	SDL_sem *wait_sem;
-	SDL_sem *wait_done;
+    SDL_mutex *lock;
+    int waiting;
+    int signals;
+    SDL_sem *wait_sem;
+    SDL_sem *wait_done;
 };
 
 /* Create a condition variable */
-SDL_cond * SDL_CreateCond(void)
+SDL_cond *
+SDL_CreateCond(void)
 {
-	SDL_cond *cond;
+    SDL_cond *cond;
 
-	cond = (SDL_cond *) SDL_malloc(sizeof(SDL_cond));
-	if ( cond ) {
-		cond->lock = SDL_CreateMutex();
-		cond->wait_sem = SDL_CreateSemaphore(0);
-		cond->wait_done = SDL_CreateSemaphore(0);
-		cond->waiting = cond->signals = 0;
-		if ( ! cond->lock || ! cond->wait_sem || ! cond->wait_done ) {
-			SDL_DestroyCond(cond);
-			cond = NULL;
-		}
-	} else {
-		SDL_OutOfMemory();
-	}
-	return(cond);
+    cond = (SDL_cond *) SDL_malloc(sizeof(SDL_cond));
+    if (cond) {
+        cond->lock = SDL_CreateMutex();
+        cond->wait_sem = SDL_CreateSemaphore(0);
+        cond->wait_done = SDL_CreateSemaphore(0);
+        cond->waiting = cond->signals = 0;
+        if (!cond->lock || !cond->wait_sem || !cond->wait_done) {
+            SDL_DestroyCond(cond);
+            cond = NULL;
+        }
+    } else {
+        SDL_OutOfMemory();
+    }
+    return (cond);
 }
 
 /* Destroy a condition variable */
-void SDL_DestroyCond(SDL_cond *cond)
+void
+SDL_DestroyCond(SDL_cond * cond)
 {
-	if ( cond ) {
-		if ( cond->wait_sem ) {
-			SDL_DestroySemaphore(cond->wait_sem);
-		}
-		if ( cond->wait_done ) {
-			SDL_DestroySemaphore(cond->wait_done);
-		}
-		if ( cond->lock ) {
-			SDL_DestroyMutex(cond->lock);
-		}
-		SDL_free(cond);
-	}
+    if (cond) {
+        if (cond->wait_sem) {
+            SDL_DestroySemaphore(cond->wait_sem);
+        }
+        if (cond->wait_done) {
+            SDL_DestroySemaphore(cond->wait_done);
+        }
+        if (cond->lock) {
+            SDL_DestroyMutex(cond->lock);
+        }
+        SDL_free(cond);
+    }
 }
 
 /* Restart one of the threads that are waiting on the condition variable */
-int SDL_CondSignal(SDL_cond *cond)
+int
+SDL_CondSignal(SDL_cond * cond)
 {
-	if ( ! cond ) {
-		SDL_SetError("Passed a NULL condition variable");
-		return -1;
-	}
+    if (!cond) {
+        return SDL_SetError("Passed a NULL condition variable");
+    }
 
-	/* If there are waiting threads not already signalled, then
-	   signal the condition and wait for the thread to respond.
-	*/
-	SDL_LockMutex(cond->lock);
-	if ( cond->waiting > cond->signals ) {
-		++cond->signals;
-		SDL_SemPost(cond->wait_sem);
-		SDL_UnlockMutex(cond->lock);
-		SDL_SemWait(cond->wait_done);
-	} else {
-		SDL_UnlockMutex(cond->lock);
-	}
+    /* If there are waiting threads not already signalled, then
+       signal the condition and wait for the thread to respond.
+     */
+    SDL_LockMutex(cond->lock);
+    if (cond->waiting > cond->signals) {
+        ++cond->signals;
+        SDL_SemPost(cond->wait_sem);
+        SDL_UnlockMutex(cond->lock);
+        SDL_SemWait(cond->wait_done);
+    } else {
+        SDL_UnlockMutex(cond->lock);
+    }
 
-	return 0;
+    return 0;
 }
 
 /* Restart all threads that are waiting on the condition variable */
-int SDL_CondBroadcast(SDL_cond *cond)
+int
+SDL_CondBroadcast(SDL_cond * cond)
 {
-	if ( ! cond ) {
-		SDL_SetError("Passed a NULL condition variable");
-		return -1;
-	}
+    if (!cond) {
+        return SDL_SetError("Passed a NULL condition variable");
+    }
 
-	/* If there are waiting threads not already signalled, then
-	   signal the condition and wait for the thread to respond.
-	*/
-	SDL_LockMutex(cond->lock);
-	if ( cond->waiting > cond->signals ) {
-		int i, num_waiting;
+    /* If there are waiting threads not already signalled, then
+       signal the condition and wait for the thread to respond.
+     */
+    SDL_LockMutex(cond->lock);
+    if (cond->waiting > cond->signals) {
+        int i, num_waiting;
 
-		num_waiting = (cond->waiting - cond->signals);
-		cond->signals = cond->waiting;
-		for ( i=0; i<num_waiting; ++i ) {
-			SDL_SemPost(cond->wait_sem);
-		}
-		/* Now all released threads are blocked here, waiting for us.
-		   Collect them all (and win fabulous prizes!) :-)
-		 */
-		SDL_UnlockMutex(cond->lock);
-		for ( i=0; i<num_waiting; ++i ) {
-			SDL_SemWait(cond->wait_done);
-		}
-	} else {
-		SDL_UnlockMutex(cond->lock);
-	}
+        num_waiting = (cond->waiting - cond->signals);
+        cond->signals = cond->waiting;
+        for (i = 0; i < num_waiting; ++i) {
+            SDL_SemPost(cond->wait_sem);
+        }
+        /* Now all released threads are blocked here, waiting for us.
+           Collect them all (and win fabulous prizes!) :-)
+         */
+        SDL_UnlockMutex(cond->lock);
+        for (i = 0; i < num_waiting; ++i) {
+            SDL_SemWait(cond->wait_done);
+        }
+    } else {
+        SDL_UnlockMutex(cond->lock);
+    }
 
-	return 0;
+    return 0;
 }
 
 /* Wait on the condition variable for at most 'ms' milliseconds.
@@ -141,75 +142,79 @@ int SDL_CondBroadcast(SDL_cond *cond)
 Typical use:
 
 Thread A:
-	SDL_LockMutex(lock);
-	while ( ! condition ) {
-		SDL_CondWait(cond);
-	}
-	SDL_UnlockMutex(lock);
+    SDL_LockMutex(lock);
+    while ( ! condition ) {
+        SDL_CondWait(cond, lock);
+    }
+    SDL_UnlockMutex(lock);
 
 Thread B:
-	SDL_LockMutex(lock);
-	...
-	condition = true;
-	...
-	SDL_UnlockMutex(lock);
+    SDL_LockMutex(lock);
+    ...
+    condition = true;
+    ...
+    SDL_CondSignal(cond);
+    SDL_UnlockMutex(lock);
  */
-int SDL_CondWaitTimeout(SDL_cond *cond, SDL_mutex *mutex, Uint32 ms)
+int
+SDL_CondWaitTimeout(SDL_cond * cond, SDL_mutex * mutex, Uint32 ms)
 {
-	int retval;
+    int retval;
 
-	if ( ! cond ) {
-		SDL_SetError("Passed a NULL condition variable");
-		return -1;
-	}
+    if (!cond) {
+        return SDL_SetError("Passed a NULL condition variable");
+    }
 
-	/* Obtain the protection mutex, and increment the number of waiters.
-	   This allows the signal mechanism to only perform a signal if there
-	   are waiting threads.
-	 */
-	SDL_LockMutex(cond->lock);
-	++cond->waiting;
-	SDL_UnlockMutex(cond->lock);
+    /* Obtain the protection mutex, and increment the number of waiters.
+       This allows the signal mechanism to only perform a signal if there
+       are waiting threads.
+     */
+    SDL_LockMutex(cond->lock);
+    ++cond->waiting;
+    SDL_UnlockMutex(cond->lock);
 
-	/* Unlock the mutex, as is required by condition variable semantics */
-	SDL_UnlockMutex(mutex);
+    /* Unlock the mutex, as is required by condition variable semantics */
+    SDL_UnlockMutex(mutex);
 
-	/* Wait for a signal */
-	if ( ms == SDL_MUTEX_MAXWAIT ) {
-		retval = SDL_SemWait(cond->wait_sem);
-	} else {
-		retval = SDL_SemWaitTimeout(cond->wait_sem, ms);
-	}
+    /* Wait for a signal */
+    if (ms == SDL_MUTEX_MAXWAIT) {
+        retval = SDL_SemWait(cond->wait_sem);
+    } else {
+        retval = SDL_SemWaitTimeout(cond->wait_sem, ms);
+    }
 
-	/* Let the signaler know we have completed the wait, otherwise
-           the signaler can race ahead and get the condition semaphore
-           if we are stopped between the mutex unlock and semaphore wait,
-           giving a deadlock.  See the following URL for details:
-        http://www-classic.be.com/aboutbe/benewsletter/volume_III/Issue40.html
-	*/
-	SDL_LockMutex(cond->lock);
-	if ( cond->signals > 0 ) {
-		/* If we timed out, we need to eat a condition signal */
-		if ( retval > 0 ) {
-			SDL_SemWait(cond->wait_sem);
-		}
-		/* We always notify the signal thread that we are done */
-		SDL_SemPost(cond->wait_done);
+    /* Let the signaler know we have completed the wait, otherwise
+       the signaler can race ahead and get the condition semaphore
+       if we are stopped between the mutex unlock and semaphore wait,
+       giving a deadlock.  See the following URL for details:
+       http://web.archive.org/web/20010914175514/http://www-classic.be.com/aboutbe/benewsletter/volume_III/Issue40.html#Workshop
+     */
+    SDL_LockMutex(cond->lock);
+    if (cond->signals > 0) {
+        /* If we timed out, we need to eat a condition signal */
+        if (retval > 0) {
+            SDL_SemWait(cond->wait_sem);
+        }
+        /* We always notify the signal thread that we are done */
+        SDL_SemPost(cond->wait_done);
 
-		/* Signal handshake complete */
-		--cond->signals;
-	}
-	--cond->waiting;
-	SDL_UnlockMutex(cond->lock);
+        /* Signal handshake complete */
+        --cond->signals;
+    }
+    --cond->waiting;
+    SDL_UnlockMutex(cond->lock);
 
-	/* Lock the mutex, as is required by condition variable semantics */
-	SDL_LockMutex(mutex);
+    /* Lock the mutex, as is required by condition variable semantics */
+    SDL_LockMutex(mutex);
 
-	return retval;
+    return retval;
 }
 
 /* Wait on the condition variable forever */
-int SDL_CondWait(SDL_cond *cond, SDL_mutex *mutex)
+int
+SDL_CondWait(SDL_cond * cond, SDL_mutex * mutex)
 {
-	return SDL_CondWaitTimeout(cond, mutex, SDL_MUTEX_MAXWAIT);
+    return SDL_CondWaitTimeout(cond, mutex, SDL_MUTEX_MAXWAIT);
 }
+
+/* vi: set ts=4 sw=4 expandtab: */
