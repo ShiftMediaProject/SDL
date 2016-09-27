@@ -68,11 +68,18 @@
     <ClInclude Include="..\include\SDL_loadso.h" />
     <ClInclude Include="..\include\SDL_log.h" />
     <ClInclude Include="..\include\SDL_main.h" />
+    <ClInclude Include="..\include\SDL_messagebox.h" />
     <ClInclude Include="..\include\SDL_mouse.h" />
     <ClInclude Include="..\include\SDL_mutex.h" />
     <ClInclude Include="..\include\SDL_name.h" />
     <ClInclude Include="..\include\SDL_opengl.h" />
     <ClInclude Include="..\include\SDL_opengles.h" />
+    <ClInclude Include="..\include\SDL_opengles2.h" />
+    <ClInclude Include="..\include\SDL_opengles2_gl2.h" />
+    <ClInclude Include="..\include\SDL_opengles2_gl2ext.h" />
+    <ClInclude Include="..\include\SDL_opengles2_gl2platform.h" />
+    <ClInclude Include="..\include\SDL_opengles2_khrplatform.h" />
+    <ClInclude Include="..\include\SDL_opengl_glext.h" />
     <ClInclude Include="..\include\SDL_pixels.h" />
     <ClInclude Include="..\include\SDL_platform.h" />
     <ClInclude Include="..\include\SDL_power.h" />
@@ -94,17 +101,23 @@
     <ClInclude Include="..\include\SDL_version.h" />
     <ClInclude Include="..\include\SDL_video.h" />
     <ClInclude Include="..\include\SDL_gamecontroller.h" />
+    <ClInclude Include="..\src\core\windows\SDL_directx.h" />
     <ClInclude Include="..\src\core\windows\SDL_windows.h" />
+    <ClInclude Include="..\src\core\windows\SDL_xinput.h" />
     <ClInclude Include="..\src\dynapi\SDL_dynapi.h" />
     <ClInclude Include="..\src\dynapi\SDL_dynapi_overrides.h" />
     <ClInclude Include="..\src\dynapi\SDL_dynapi_procs.h" />
     <ClInclude Include="..\src\events\blank_cursor.h" />
     <ClInclude Include="..\src\events\default_cursor.h" />
-    <ClInclude Include="..\src\audio\directsound\directx.h" />
     <ClInclude Include="..\src\events\SDL_clipboardevents_c.h" />
     <ClInclude Include="..\src\events\SDL_gesture_c.h" />
     <ClInclude Include="..\src\events\SDL_touch_c.h" />
-    <ClInclude Include="..\src\joystick\windows\SDL_dxjoystick_c.h" />
+    <ClInclude Include="..\src\haptic\windows\SDL_dinputhaptic_c.h" />
+    <ClInclude Include="..\src\haptic\windows\SDL_windowshaptic_c.h" />
+    <ClInclude Include="..\src\haptic\windows\SDL_xinputhaptic_c.h" />
+    <ClInclude Include="..\src\joystick\windows\SDL_dinputjoystick_c.h" />
+    <ClInclude Include="..\src\joystick\windows\SDL_windowsjoystick_c.h" />
+    <ClInclude Include="..\src\joystick\windows\SDL_xinputjoystick_c.h" />
     <ClInclude Include="..\src\libm\math_libm.h" />
     <ClInclude Include="..\src\libm\math_private.h" />
     <ClInclude Include="..\src\render\mmx.h" />
@@ -175,11 +188,18 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\core\windows\SDL_windows.c" />
+    <ClCompile Include="..\src\core\windows\SDL_xinput.c" />
     <ClCompile Include="..\src\dynapi\SDL_dynapi.c" />
     <ClCompile Include="..\src\events\SDL_clipboardevents.c" />
     <ClCompile Include="..\src\events\SDL_gesture.c" />
     <ClCompile Include="..\src\events\SDL_touch.c" />
     <ClCompile Include="..\src\filesystem\windows\SDL_sysfilesystem.c" />
+    <ClCompile Include="..\src\haptic\windows\SDL_dinputhaptic.c" />
+    <ClCompile Include="..\src\haptic\windows\SDL_windowshaptic.c" />
+    <ClCompile Include="..\src\haptic\windows\SDL_xinputhaptic.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_dinputjoystick.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_windowsjoystick.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_xinputjoystick.c" />
     <ClCompile Include="..\src\libm\e_atan2.c" />
     <ClCompile Include="..\src\libm\e_log.c" />
     <ClCompile Include="..\src\libm\e_pow.c" />
@@ -188,6 +208,7 @@
     <ClCompile Include="..\src\libm\k_cos.c" />
     <ClCompile Include="..\src\libm\k_rem_pio2.c" />
     <ClCompile Include="..\src\libm\k_sin.c" />
+    <ClCompile Include="..\src\libm\k_tan.c" />
     <ClCompile Include="..\src\libm\s_atan.c" />
     <ClCompile Include="..\src\libm\s_copysign.c" />
     <ClCompile Include="..\src\libm\s_cos.c" />
@@ -195,6 +216,7 @@
     <ClCompile Include="..\src\libm\s_floor.c" />
     <ClCompile Include="..\src\libm\s_scalbn.c" />
     <ClCompile Include="..\src\libm\s_sin.c" />
+    <ClCompile Include="..\src\libm\s_tan.c" />
     <ClCompile Include="..\src\render\direct3d11\SDL_render_d3d11.c" />
     <ClCompile Include="..\src\render\direct3d\SDL_render_d3d.c" />
     <ClCompile Include="..\src\render\opengles2\SDL_render_gles2.c" />
@@ -242,7 +264,6 @@
     <ClCompile Include="..\src\audio\directsound\SDL_directsound.c" />
     <ClCompile Include="..\src\events\SDL_dropevents.c" />
     <ClCompile Include="..\src\audio\xaudio2\SDL_xaudio2.c" />
-    <ClCompile Include="..\src\joystick\windows\SDL_dxjoystick.c" />
     <ClCompile Include="..\src\SDL_error.c" />
     <ClCompile Include="..\src\events\SDL_events.c" />
     <ClCompile Include="..\src\video\SDL_fillrect.c" />
@@ -269,7 +290,6 @@
     <ClCompile Include="..\src\stdlib\SDL_string.c" />
     <ClCompile Include="..\src\video\SDL_surface.c" />
     <ClCompile Include="..\src\thread\generic\SDL_syscond.c" />
-    <ClCompile Include="..\src\haptic\windows\SDL_syshaptic.c" />
     <ClCompile Include="..\src\loadso\windows\SDL_sysloadso.c" />
     <ClCompile Include="..\src\thread\windows\SDL_sysmutex.c" />
     <ClCompile Include="..\src\power\windows\SDL_syspower.c" />
@@ -481,7 +501,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -529,7 +549,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -577,7 +597,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
@@ -627,7 +647,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
@@ -685,7 +705,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
@@ -746,7 +766,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
@@ -807,7 +827,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
@@ -868,7 +888,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
@@ -929,7 +949,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
@@ -990,7 +1010,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
-      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
