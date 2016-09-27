@@ -57,6 +57,7 @@
     <ClInclude Include="..\include\SDL_endian.h" />
     <ClInclude Include="..\include\SDL_error.h" />
     <ClInclude Include="..\include\SDL_events.h" />
+    <ClInclude Include="..\include\SDL_filesystem.h" />
     <ClInclude Include="..\include\SDL_gesture.h" />
     <ClInclude Include="..\include\SDL_haptic.h" />
     <ClInclude Include="..\include\SDL_hints.h" />
@@ -170,6 +171,7 @@
     <ClCompile Include="..\src\events\SDL_clipboardevents.c" />
     <ClCompile Include="..\src\events\SDL_gesture.c" />
     <ClCompile Include="..\src\events\SDL_touch.c" />
+    <ClCompile Include="..\src\filesystem\windows\SDL_sysfilesystem.c" />
     <ClCompile Include="..\src\libm\e_atan2.c" />
     <ClCompile Include="..\src\libm\e_log.c" />
     <ClCompile Include="..\src\libm\e_pow.c" />
@@ -467,7 +469,7 @@
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -515,7 +517,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -564,7 +566,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>true</BufferSecurityCheck>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -613,7 +615,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -671,7 +673,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -732,7 +734,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -793,7 +795,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -854,7 +856,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -915,7 +917,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>
@@ -976,7 +978,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <DisableSpecificWarnings>4996;4267;4244;4312;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
     <Link>

@@ -178,6 +178,12 @@
     <Filter Include="Header Files\src\thread\windows">
       <UniqueIdentifier>{b32330fe-5c78-4575-9d83-e60ad7e5d7c8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\filesystem">
+      <UniqueIdentifier>{8637a34c-c26d-4bf0-85a0-7699aa19100b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\filesystem\windows">
+      <UniqueIdentifier>{124d93fa-71ff-4287-b22f-d24fa99b8168}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SDL_audio.h">
@@ -543,6 +549,9 @@
     <ClInclude Include="..\src\thread\windows\SDL_systhread_c.h">
       <Filter>Header Files\src\thread\windows</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\SDL_filesystem.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\libm\e_log.c">
@@ -883,6 +892,9 @@
     </ClCompile>
     <ClCompile Include="..\src\SDL_hints.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\filesystem\windows\SDL_sysfilesystem.c">
+      <Filter>Source Files\filesystem\windows</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
