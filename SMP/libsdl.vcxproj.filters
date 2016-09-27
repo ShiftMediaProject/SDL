@@ -184,6 +184,15 @@
     <Filter Include="Source Files\filesystem\windows">
       <UniqueIdentifier>{124d93fa-71ff-4287-b22f-d24fa99b8168}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\dynapi">
+      <UniqueIdentifier>{493a60e4-bedc-4bf1-abad-aaee8ffa2220}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\dynapi">
+      <UniqueIdentifier>{7b2fe885-4098-4cca-9cd6-cfd27cfe83a2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render\opengles2">
+      <UniqueIdentifier>{316512b1-458e-4880-b915-36dad8cf3f54}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SDL_audio.h">
@@ -552,6 +561,24 @@
     <ClInclude Include="..\include\SDL_filesystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\dynapi\SDL_dynapi.h">
+      <Filter>Header Files\src\dynapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dynapi\SDL_dynapi_overrides.h">
+      <Filter>Header Files\src\dynapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\dynapi\SDL_dynapi_procs.h">
+      <Filter>Header Files\src\dynapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_egl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_egl_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windows\SDL_windowsopengles.h">
+      <Filter>Header Files\src\video\windows</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\libm\e_log.c">
@@ -895,6 +922,21 @@
     </ClCompile>
     <ClCompile Include="..\src\filesystem\windows\SDL_sysfilesystem.c">
       <Filter>Source Files\filesystem\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\dynapi\SDL_dynapi.c">
+      <Filter>Source Files\dynapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windows\SDL_windowsopengles.c">
+      <Filter>Source Files\video\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_egl.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\opengles2\SDL_shaders_gles2.c">
+      <Filter>Source Files\render\opengles2</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\opengles2\SDL_render_gles2.c">
+      <Filter>Source Files\render\opengles2</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
