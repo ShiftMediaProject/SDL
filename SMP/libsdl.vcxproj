@@ -477,7 +477,8 @@
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -524,7 +525,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -573,7 +575,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -620,7 +623,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -680,7 +684,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -740,7 +745,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -800,7 +806,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -860,7 +867,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -919,7 +927,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x86\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
@@ -978,7 +987,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
