@@ -1,7 +1,7 @@
 /* include/SDL_config.h.  Generated from SDL_config.h.in by configure.  */
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2014 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2016 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -50,7 +50,6 @@
 #endif
 #define HAVE_GCC_ATOMICS 1
 /* #undef HAVE_GCC_SYNC_LOCK_TEST_AND_SET */
-#define HAVE_PTHREAD_SPINLOCK 1
 
 /* Comment this if you want to build without any C library requirements */
 #define HAVE_LIBC 1
@@ -229,6 +228,9 @@
 #endif
 #ifndef SDL_VIDEO_DRIVER_X11_XCURSOR
 #define SDL_VIDEO_DRIVER_X11_XCURSOR 1
+#endif
+#ifndef SDL_VIDEO_DRIVER_X11_XDBE
+#define SDL_VIDEO_DRIVER_X11_XDBE 1
 #endif
 #ifndef SDL_VIDEO_DRIVER_X11_HAS_XKBKEYCODETOKEYSYM
 #define SDL_VIDEO_DRIVER_X11_HAS_XKBKEYCODETOKEYSYM 1

@@ -1,7 +1,7 @@
 /* include/SDL_config.h.  Generated from SDL_config.h.in by configure.  */
 /*
   Simple DirectMedia Layer
-  Copyright (C) 1997-2014 Sam Lantinga <slouken@libsdl.org>
+  Copyright (C) 1997-2016 Sam Lantinga <slouken@libsdl.org>
 
   This software is provided 'as-is', without any express or implied
   warranty.  In no event will the authors be held liable for any damages
@@ -46,7 +46,6 @@
 #define SIZEOF_VOIDP 4
 #define HAVE_GCC_ATOMICS 1
 /* #undef HAVE_GCC_SYNC_LOCK_TEST_AND_SET */
-#define HAVE_PTHREAD_SPINLOCK 1
 
 /* Comment this if you want to build without any C library requirements */
 #define HAVE_LIBC 0
