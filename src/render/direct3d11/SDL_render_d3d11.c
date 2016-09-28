@@ -1558,7 +1558,7 @@ D3D11_CreateWindowSizeDependentResources(SDL_Renderer * renderer)
              */
             goto done;
         } else if (FAILED(result)) {
-            WIN_SetErrorFromHRESULT(__FUNCTION__ ", IDXGISwapChain::ResizeBuffers", result);
+            WIN_SetErrorFromHRESULT(SDL_DEBUG(", IDXGISwapChain::ResizeBuffers"), result);
             goto done;
         }
 #endif
@@ -1676,7 +1676,7 @@ D3D11_Trim(SDL_Renderer * renderer)
 
     result = ID3D11Device_QueryInterface(data->d3dDevice, &IID_IDXGIDevice3, &dxgiDevice);
     if (FAILED(result)) {
-        //WIN_SetErrorFromHRESULT(__FUNCTION__ ", ID3D11Device to IDXGIDevice3", result);
+        //WIN_SetErrorFromHRESULT(SDL_DEBUG(", ID3D11Device to IDXGIDevice3"), result);
         return;
     }
 
@@ -2934,7 +2934,7 @@ D3D11_RenderReadPixels(SDL_Renderer * renderer, const SDL_Rect * rect,
          * Get the error message, and attach some extra data to it.
          */
         char errorMessage[1024];
-        SDL_snprintf(errorMessage, sizeof(errorMessage), __FUNCTION__ ", Convert Pixels failed: %s", SDL_GetError());
+        SDL_snprintf(errorMessage, sizeof(errorMessage), SDL_DEBUG(", Convert Pixels failed: %s"), SDL_GetError());
         SDL_SetError("%s", errorMessage);
         goto done;
     }
