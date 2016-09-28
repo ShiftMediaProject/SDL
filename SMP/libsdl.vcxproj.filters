@@ -100,9 +100,6 @@
     <Filter Include="Source Files\render\software">
       <UniqueIdentifier>{f30301d9-bbc5-4fe0-95e3-3ff3faa02f52}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\libm">
-      <UniqueIdentifier>{9ec5f0a2-8c47-4ab2-b4a0-86efadd142cf}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\atomic">
       <UniqueIdentifier>{7ac0b1bd-cf12-49a4-8920-889b4771c699}</UniqueIdentifier>
     </Filter>
@@ -338,9 +335,6 @@
     </ClInclude>
     <ClInclude Include="..\src\events\default_cursor.h">
       <Filter>Header Files\src\events</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\libm\math_private.h">
-      <Filter>Header Files\src\libm</Filter>
     </ClInclude>
     <ClInclude Include="..\src\render\mmx.h">
       <Filter>Header Files\src\render</Filter>
@@ -629,48 +623,6 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="..\src\libm\e_log.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\e_pow.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\e_rem_pio2.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\e_sqrt.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\k_cos.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\k_rem_pio2.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\k_sin.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_atan.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_copysign.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_cos.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_fabs.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_floor.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_scalbn.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_sin.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\SDL.c">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -811,9 +763,6 @@
     </ClCompile>
     <ClCompile Include="..\src\render\software\SDL_rotate.c">
       <Filter>Source Files\render\software</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\e_atan2.c">
-      <Filter>Source Files\libm</Filter>
     </ClCompile>
     <ClCompile Include="..\src\stdlib\SDL_getenv.c">
       <Filter>Source Files\stdlib</Filter>
@@ -985,12 +934,6 @@
     </ClCompile>
     <ClCompile Include="..\src\render\direct3d11\SDL_render_d3d11.c">
       <Filter>Source Files\render\direct3d11</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\k_tan.c">
-      <Filter>Source Files\libm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\libm\s_tan.c">
-      <Filter>Source Files\libm</Filter>
     </ClCompile>
     <ClCompile Include="..\src\haptic\windows\SDL_dinputhaptic.c">
       <Filter>Source Files\haptic\windows</Filter>

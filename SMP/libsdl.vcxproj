@@ -119,7 +119,6 @@
     <ClInclude Include="..\src\joystick\windows\SDL_windowsjoystick_c.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_xinputjoystick_c.h" />
     <ClInclude Include="..\src\libm\math_libm.h" />
-    <ClInclude Include="..\src\libm\math_private.h" />
     <ClInclude Include="..\src\render\mmx.h" />
     <ClInclude Include="..\src\render\opengl\SDL_glfuncs.h" />
     <ClInclude Include="..\src\render\opengl\SDL_shaders_gl.h" />
@@ -200,23 +199,6 @@
     <ClCompile Include="..\src\joystick\windows\SDL_dinputjoystick.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_windowsjoystick.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_xinputjoystick.c" />
-    <ClCompile Include="..\src\libm\e_atan2.c" />
-    <ClCompile Include="..\src\libm\e_log.c" />
-    <ClCompile Include="..\src\libm\e_pow.c" />
-    <ClCompile Include="..\src\libm\e_rem_pio2.c" />
-    <ClCompile Include="..\src\libm\e_sqrt.c" />
-    <ClCompile Include="..\src\libm\k_cos.c" />
-    <ClCompile Include="..\src\libm\k_rem_pio2.c" />
-    <ClCompile Include="..\src\libm\k_sin.c" />
-    <ClCompile Include="..\src\libm\k_tan.c" />
-    <ClCompile Include="..\src\libm\s_atan.c" />
-    <ClCompile Include="..\src\libm\s_copysign.c" />
-    <ClCompile Include="..\src\libm\s_cos.c" />
-    <ClCompile Include="..\src\libm\s_fabs.c" />
-    <ClCompile Include="..\src\libm\s_floor.c" />
-    <ClCompile Include="..\src\libm\s_scalbn.c" />
-    <ClCompile Include="..\src\libm\s_sin.c" />
-    <ClCompile Include="..\src\libm\s_tan.c" />
     <ClCompile Include="..\src\render\direct3d11\SDL_render_d3d11.c" />
     <ClCompile Include="..\src\render\direct3d\SDL_render_d3d.c" />
     <ClCompile Include="..\src\render\opengles2\SDL_render_gles2.c" />
@@ -502,7 +484,7 @@
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -513,19 +495,18 @@
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -550,7 +531,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -561,19 +542,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -598,7 +578,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0502;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BufferSecurityCheck>true</BufferSecurityCheck>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
@@ -611,19 +591,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -648,7 +627,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Optimization>Disabled</Optimization>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -659,19 +638,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrtd.lib;vcruntimed.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -706,7 +684,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -720,19 +698,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -767,7 +744,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x86\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -781,19 +758,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -828,7 +804,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -842,19 +818,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -889,7 +864,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;DECLSPEC=;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
       <ProgramDataBaseFileName>$(OutDir)\lib\x64\$(TargetName).pdb</ProgramDataBaseFileName>
@@ -903,19 +878,18 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -950,7 +924,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0502;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -963,20 +937,19 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x86\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
@@ -1011,7 +984,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <FloatingPointModel>Fast</FloatingPointModel>
       <FloatingPointExceptions>false</FloatingPointExceptions>
       <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;SDL_XAUDIO2_HAS_SDK=1;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>.\;..\src;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>.\include;.\;..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DisableSpecificWarnings>4996;4267;4244;4312;4018;%(DisableSpecificWarnings)</DisableSpecificWarnings>
       <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
     </ClCompile>
@@ -1023,20 +996,19 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' == '12.0'">winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalDependencies Condition="'$(VisualStudioVersion)' != '12.0'">winmm.lib;imm32.lib;version.lib;ucrt.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
 mkdir $(OutDir)\include\SDL
 copy ..\include\*.h $(OutDir)\include\SDL
+copy .\include\SDL_config.h $(OutDir)\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>
-if exist $(OutDir)\include\SDL (
+      <Command>if exist $(OutDir)\include\SDL (
 rd /s /q $(OutDir)\include\SDL
 cd ../
 cd $(ProjectDir)
