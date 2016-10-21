@@ -127,7 +127,6 @@
     <ClInclude Include="..\src\render\SDL_yuv_sw_c.h" />
     <ClInclude Include="..\src\audio\SDL_audio_c.h" />
     <ClInclude Include="..\src\audio\SDL_audiodev_c.h" />
-    <ClInclude Include="..\src\audio\SDL_audiomem.h" />
     <ClInclude Include="..\src\render\software\SDL_blendfillrect.h" />
     <ClInclude Include="..\src\render\software\SDL_blendline.h" />
     <ClInclude Include="..\src\render\software\SDL_blendpoint.h" />

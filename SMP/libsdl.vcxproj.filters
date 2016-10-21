@@ -285,9 +285,6 @@
     <ClInclude Include="..\src\audio\SDL_audiodev_c.h">
       <Filter>Header Files\src\audio</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\audio\SDL_audiomem.h">
-      <Filter>Header Files\src\audio</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\audio\SDL_sysaudio.h">
       <Filter>Header Files\src\audio</Filter>
     </ClInclude>
