@@ -601,6 +601,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <LargeAddressAware>true</LargeAddressAware>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -648,6 +649,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -948,6 +950,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <LargeAddressAware>true</LargeAddressAware>
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
@@ -1007,6 +1010,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
       <Command>mkdir $(OutDir)\include
