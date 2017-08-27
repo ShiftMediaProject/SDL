@@ -506,16 +506,16 @@
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -525,8 +525,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -554,16 +554,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -573,8 +573,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -605,16 +605,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -624,8 +624,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -654,16 +654,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -673,8 +673,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -711,16 +711,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -730,8 +730,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -768,16 +768,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -787,8 +787,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -825,16 +825,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -844,8 +844,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -882,16 +882,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -901,8 +901,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -940,16 +940,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -959,8 +959,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
@@ -997,16 +997,16 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion>6.0</MinimumRequiredVersion>
     </Link>
     <PostBuildEvent>
-      <Command>mkdir $(OutDir)\include
-mkdir $(OutDir)\include\SDL
-copy ..\include\*.h $(OutDir)\include\SDL
-copy .\include\SDL_config.h $(OutDir)\include\SDL
+      <Command>mkdir "$(OutDir)"\include
+mkdir "$(OutDir)"\include\SDL
+copy ..\include\*.h "$(OutDir)"\include\SDL
+copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
-      <Command>if exist $(OutDir)\include\SDL (
-rd /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rd /s /q "$(OutDir)"\include\SDL
 cd ../
 cd $(ProjectDir)
 )</Command>
@@ -1016,8 +1016,8 @@ cd $(ProjectDir)
     </CustomBuildStep>
     <CustomBuildStep>
       <Outputs>force_clean</Outputs>
-      <Command>if exist $(OutDir)\include\SDL (
-rmdir /s /q $(OutDir)\include\SDL
+      <Command>if exist "$(OutDir)"\include\SDL (
+rmdir /s /q "$(OutDir)"\include\SDL
 )
 if exist $(OutDir)\licenses\libsdl.txt (
 del /f /q $(OutDir)\licenses\libsdl.txt
