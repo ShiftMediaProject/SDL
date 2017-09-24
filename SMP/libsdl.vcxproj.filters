@@ -109,9 +109,6 @@
     <Filter Include="Source Files\audio\directsound">
       <UniqueIdentifier>{6d99e8ce-7bb8-41af-be50-93f961a57714}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\audio\xaudio2">
-      <UniqueIdentifier>{60b2ad1a-d193-402f-a72d-39e3f8a21c7a}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\src\audio\winmm">
       <UniqueIdentifier>{032492ac-4e7c-4537-8faa-3a55a6059f39}</UniqueIdentifier>
     </Filter>
@@ -195,6 +192,30 @@
     </Filter>
     <Filter Include="Header Files\src\haptic\windows">
       <UniqueIdentifier>{675f222e-55bb-4185-8b6d-0a4e21098892}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\audio\wasapi">
+      <UniqueIdentifier>{12d36376-29a6-4c78-b6b1-d2a1c8388489}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\audio\wasapi">
+      <UniqueIdentifier>{efe44594-2d78-4885-85b5-507ab5eb4446}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\power">
+      <UniqueIdentifier>{6e9c8e67-64ab-43c4-a39a-657de245a353}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\khronos">
+      <UniqueIdentifier>{cf3cc25a-4ce0-4f6d-a7bf-c08069a3c802}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\khronos\EGL">
+      <UniqueIdentifier>{d77cffa6-58c7-40a5-9c66-b0d860f48314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\khronos\GLES2">
+      <UniqueIdentifier>{33adb8a9-1bfd-41cf-8123-046586d0fc5d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\khronos\KHR">
+      <UniqueIdentifier>{4ea11ba7-9169-4826-ab6a-432b934da6bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\khronos\vulkan">
+      <UniqueIdentifier>{292cbd22-f816-4594-bde9-496a844490d1}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -492,12 +513,6 @@
     <ClInclude Include="..\src\video\SDL_blit_auto.h">
       <Filter>Header Files\src\video</Filter>
     </ClInclude>
-    <ClInclude Include="..\include\SDL_config.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="..\include\SDL_config_windows.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\video\windows\SDL_vkeys.h">
       <Filter>Header Files\src\video\windows</Filter>
     </ClInclude>
@@ -618,6 +633,60 @@
     <ClInclude Include="..\src\core\windows\SDL_directx.h">
       <Filter>Header Files\src\core\windows</Filter>
     </ClInclude>
+    <ClInclude Include="include\SDL_config.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_vulkan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\audio\wasapi\SDL_wasapi.h">
+      <Filter>Header Files\src\audio\wasapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\power\SDL_syspower.h">
+      <Filter>Header Files\src\power</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\SDL_yuv_mmx_c.h">
+      <Filter>Header Files\src\render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SDL_dataqueue.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SDL_internal.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\windows\SDL_windowsvulkan.h">
+      <Filter>Header Files\src\video\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_vulkan_internal.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\EGL\egl.h">
+      <Filter>Header Files\src\video\khronos\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\EGL\eglext.h">
+      <Filter>Header Files\src\video\khronos\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\EGL\eglplatform.h">
+      <Filter>Header Files\src\video\khronos\EGL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\GLES2\gl2.h">
+      <Filter>Header Files\src\video\khronos\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\GLES2\gl2ext.h">
+      <Filter>Header Files\src\video\khronos\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\GLES2\gl2platform.h">
+      <Filter>Header Files\src\video\khronos\GLES2</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\KHR\khrplatform.h">
+      <Filter>Header Files\src\video\khronos\KHR</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\vulkan\vk_platform.h">
+      <Filter>Header Files\src\video\khronos\vulkan</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\khronos\vulkan\vulkan.h">
+      <Filter>Header Files\src\video\khronos\vulkan</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\SDL.c">
@@ -661,9 +730,6 @@
     </ClCompile>
     <ClCompile Include="..\src\audio\winmm\SDL_winmm.c">
       <Filter>Source Files\audio\winmm</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\audio\xaudio2\SDL_xaudio2.c">
-      <Filter>Source Files\audio\xaudio2</Filter>
     </ClCompile>
     <ClCompile Include="..\src\core\windows\SDL_windows.c">
       <Filter>Source Files\core\windows</Filter>
@@ -952,6 +1018,18 @@
     </ClCompile>
     <ClCompile Include="..\src\core\windows\SDL_xinput.c">
       <Filter>Source Files\core\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\wasapi\SDL_wasapi.c">
+      <Filter>Source Files\audio\wasapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SDL_dataqueue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\windows\SDL_windowsvulkan.c">
+      <Filter>Source Files\video\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_vulkan_utils.c">
+      <Filter>Source Files\video</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

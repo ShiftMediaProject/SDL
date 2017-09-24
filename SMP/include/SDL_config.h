@@ -19,8 +19,9 @@
   3. This notice may not be removed or altered from any source distribution.
 */
 
-#ifndef _SDL_config_windows_h
-#define _SDL_config_windows_h
+#ifndef SDL_config_windows_h_
+#define SDL_config_windows_h_
+#define SDL_config_h_
 
 #include "SDL_platform.h"
 
@@ -37,12 +38,14 @@
 #define HAVE_XINPUT_H 1
 
 /* Useful headers */
-#define HAVE_STDIO_H 1
 #define STDC_HEADERS 1
-#define HAVE_STRING_H 1
 #define HAVE_CTYPE_H 1
+#define HAVE_FLOAT_H 1
+#define HAVE_LIMITS_H 1
 #define HAVE_MATH_H 1
 #define HAVE_SIGNAL_H 1
+#define HAVE_STDIO_H 1
+#define HAVE_STRING_H 1
 
 /* C library functions */
 #define HAVE_LIBC
@@ -92,6 +95,7 @@
 #define HAVE_SQRTF 1
 #define HAVE_TAN 1
 #define HAVE_TANF 1
+#define HAVE__COPYSIGN 1
 #if _MSC_VER >= 1800
 #define HAVE_STRTOLL 1
 #define HAVE_VSSCANF 1
@@ -106,11 +110,13 @@
 #define HAVE_SSCANF 1
 #define HAVE_SNPRINTF 1
 #define HAVE_VSNPRINTF 1
+#define HAVE__FSEEKI64 1
 #endif
 
 /* Enable various audio drivers */
+#define SDL_AUDIO_DRIVER_WASAPI 1
 #define SDL_AUDIO_DRIVER_DSOUND 1
-#define SDL_AUDIO_DRIVER_XAUDIO2    1
+#define SDL_AUDIO_DRIVER_XAUDIO2    0
 #define SDL_AUDIO_DRIVER_WINMM  1
 #define SDL_AUDIO_DRIVER_DISK   1
 #define SDL_AUDIO_DRIVER_DUMMY  1
@@ -138,7 +144,12 @@
 #define SDL_VIDEO_RENDER_D3D    1
 #endif
 #ifndef SDL_VIDEO_RENDER_D3D11
-#define SDL_VIDEO_RENDER_D3D11	0
+#include <sdkddkver.h>
+#if defined(NTDDI_WIN8)
+#   define SDL_VIDEO_RENDER_D3D11 1
+#else
+#   define SDL_VIDEO_RENDER_D3D11 0
+#endif
 #endif
 
 /* Enable OpenGL support */
@@ -160,6 +171,9 @@
 #ifndef SDL_VIDEO_OPENGL_EGL
 #define SDL_VIDEO_OPENGL_EGL    1
 #endif
+
+/* Enable Vulkan support */
+#define SDL_VIDEO_VULKAN 1
 
 /* Enable system power support */
 #define SDL_POWER_WINDOWS 1

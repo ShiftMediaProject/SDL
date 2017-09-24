@@ -50,8 +50,6 @@
     <ClInclude Include="..\include\SDL_bits.h" />
     <ClInclude Include="..\include\SDL_blendmode.h" />
     <ClInclude Include="..\include\SDL_clipboard.h" />
-    <ClInclude Include="..\include\SDL_config.h" />
-    <ClInclude Include="..\include\SDL_config_windows.h" />
     <ClInclude Include="..\include\SDL_copying.h" />
     <ClInclude Include="..\include\SDL_cpuinfo.h" />
     <ClInclude Include="..\include\SDL_egl.h" />
@@ -101,6 +99,8 @@
     <ClInclude Include="..\include\SDL_version.h" />
     <ClInclude Include="..\include\SDL_video.h" />
     <ClInclude Include="..\include\SDL_gamecontroller.h" />
+    <ClInclude Include="..\include\SDL_vulkan.h" />
+    <ClInclude Include="..\src\audio\wasapi\SDL_wasapi.h" />
     <ClInclude Include="..\src\core\windows\SDL_directx.h" />
     <ClInclude Include="..\src\core\windows\SDL_windows.h" />
     <ClInclude Include="..\src\core\windows\SDL_xinput.h" />
@@ -119,11 +119,13 @@
     <ClInclude Include="..\src\joystick\windows\SDL_windowsjoystick_c.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_xinputjoystick_c.h" />
     <ClInclude Include="..\src\libm\math_libm.h" />
+    <ClInclude Include="..\src\power\SDL_syspower.h" />
     <ClInclude Include="..\src\render\mmx.h" />
     <ClInclude Include="..\src\render\opengl\SDL_glfuncs.h" />
     <ClInclude Include="..\src\render\opengl\SDL_shaders_gl.h" />
     <ClInclude Include="..\src\render\SDL_d3dmath.h" />
     <ClInclude Include="..\src\render\SDL_sysrender.h" />
+    <ClInclude Include="..\src\render\SDL_yuv_mmx_c.h" />
     <ClInclude Include="..\src\render\SDL_yuv_sw_c.h" />
     <ClInclude Include="..\src\audio\SDL_audio_c.h" />
     <ClInclude Include="..\src\audio\SDL_audiodev_c.h" />
@@ -137,7 +139,18 @@
     <ClInclude Include="..\src\render\software\SDL_render_sw_c.h" />
     <ClInclude Include="..\src\render\software\SDL_rotate.h" />
     <ClInclude Include="..\src\SDL_assert_c.h" />
+    <ClInclude Include="..\src\SDL_dataqueue.h" />
+    <ClInclude Include="..\src\SDL_internal.h" />
     <ClInclude Include="..\src\video\dummy\SDL_nullframebuffer_c.h" />
+    <ClInclude Include="..\src\video\khronos\EGL\egl.h" />
+    <ClInclude Include="..\src\video\khronos\EGL\eglext.h" />
+    <ClInclude Include="..\src\video\khronos\EGL\eglplatform.h" />
+    <ClInclude Include="..\src\video\khronos\GLES2\gl2.h" />
+    <ClInclude Include="..\src\video\khronos\GLES2\gl2ext.h" />
+    <ClInclude Include="..\src\video\khronos\GLES2\gl2platform.h" />
+    <ClInclude Include="..\src\video\khronos\KHR\khrplatform.h" />
+    <ClInclude Include="..\src\video\khronos\vulkan\vk_platform.h" />
+    <ClInclude Include="..\src\video\khronos\vulkan\vulkan.h" />
     <ClInclude Include="..\src\video\SDL_blit.h" />
     <ClInclude Include="..\src\video\SDL_blit_auto.h" />
     <ClInclude Include="..\src\video\SDL_blit_copy.h" />
@@ -167,6 +180,7 @@
     <ClInclude Include="..\src\video\SDL_sysvideo.h" />
     <ClInclude Include="..\src\thread\SDL_thread_c.h" />
     <ClInclude Include="..\src\timer\SDL_timer_c.h" />
+    <ClInclude Include="..\src\video\SDL_vulkan_internal.h" />
     <ClInclude Include="..\src\video\windows\SDL_vkeys.h" />
     <ClInclude Include="..\src\audio\SDL_wave.h" />
     <ClInclude Include="..\src\video\windows\SDL_windowsclipboard.h" />
@@ -180,11 +194,14 @@
     <ClInclude Include="..\src\video\windows\SDL_windowsopengles.h" />
     <ClInclude Include="..\src\video\windows\SDL_windowsshape.h" />
     <ClInclude Include="..\src\video\windows\SDL_windowsvideo.h" />
+    <ClInclude Include="..\src\video\windows\SDL_windowsvulkan.h" />
     <ClInclude Include="..\src\video\windows\SDL_windowswindow.h" />
     <ClInclude Include="..\src\events\SDL_windowevents_c.h" />
     <ClInclude Include="..\src\video\windows\wmmsg.h" />
+    <ClInclude Include="include\SDL_config.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\audio\wasapi\SDL_wasapi.c" />
     <ClCompile Include="..\src\core\windows\SDL_windows.c" />
     <ClCompile Include="..\src\core\windows\SDL_xinput.c" />
     <ClCompile Include="..\src\dynapi\SDL_dynapi.c" />
@@ -223,6 +240,7 @@
     <ClCompile Include="..\src\audio\SDL_audiocvt.c" />
     <ClCompile Include="..\src\audio\SDL_audiodev.c" />
     <ClCompile Include="..\src\audio\SDL_audiotypecvt.c" />
+    <ClCompile Include="..\src\SDL_dataqueue.c" />
     <ClCompile Include="..\src\SDL_hints.c" />
     <ClCompile Include="..\src\SDL_log.c" />
     <ClCompile Include="..\src\video\dummy\SDL_nullframebuffer.c" />
@@ -244,7 +262,6 @@
     <ClCompile Include="..\src\audio\dummy\SDL_dummyaudio.c" />
     <ClCompile Include="..\src\audio\directsound\SDL_directsound.c" />
     <ClCompile Include="..\src\events\SDL_dropevents.c" />
-    <ClCompile Include="..\src\audio\xaudio2\SDL_xaudio2.c" />
     <ClCompile Include="..\src\SDL_error.c" />
     <ClCompile Include="..\src\events\SDL_events.c" />
     <ClCompile Include="..\src\video\SDL_fillrect.c" />
@@ -282,6 +299,7 @@
     <ClCompile Include="..\src\timer\SDL_timer.c" />
     <ClCompile Include="..\src\video\SDL_video.c" />
     <ClCompile Include="..\src\audio\SDL_wave.c" />
+    <ClCompile Include="..\src\video\SDL_vulkan_utils.c" />
     <ClCompile Include="..\src\video\windows\SDL_windowsclipboard.c" />
     <ClCompile Include="..\src\video\windows\SDL_windowsevents.c" />
     <ClCompile Include="..\src\video\windows\SDL_windowsframebuffer.c" />
@@ -293,6 +311,7 @@
     <ClCompile Include="..\src\video\windows\SDL_windowsopengles.c" />
     <ClCompile Include="..\src\video\windows\SDL_windowsshape.c" />
     <ClCompile Include="..\src\video\windows\SDL_windowsvideo.c" />
+    <ClCompile Include="..\src\video\windows\SDL_windowsvulkan.c" />
     <ClCompile Include="..\src\video\windows\SDL_windowswindow.c" />
     <ClCompile Include="..\src\events\SDL_windowevents.c" />
     <ClCompile Include="..\src\joystick\SDL_gamecontroller.c" />
