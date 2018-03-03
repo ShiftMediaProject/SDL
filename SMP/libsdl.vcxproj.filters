@@ -223,6 +223,18 @@
     <Filter Include="Header Files\src\joystick\steam">
       <UniqueIdentifier>{80ebe51f-b8e5-4b3b-9087-67e3c78804b3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\src\render\direct3d">
+      <UniqueIdentifier>{350d9f92-0fb5-4a07-94d2-3c33dcd06af8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\render\direct3d11">
+      <UniqueIdentifier>{ef1f608f-6afd-403c-bdea-d4bc8ea44555}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\video\yuv2rgb">
+      <UniqueIdentifier>{fb8a0995-1577-45c7-878c-73d3a74d9543}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\yuv2rgb">
+      <UniqueIdentifier>{5ae989f1-6235-4e20-86cb-09acb9674d77}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SDL_audio.h">
@@ -359,9 +371,6 @@
     </ClInclude>
     <ClInclude Include="..\src\events\default_cursor.h">
       <Filter>Header Files\src\events</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\render\mmx.h">
-      <Filter>Header Files\src\render</Filter>
     </ClInclude>
     <ClInclude Include="..\src\events\SDL_clipboardevents_c.h">
       <Filter>Header Files\src\events</Filter>
@@ -648,9 +657,6 @@
     <ClInclude Include="..\src\power\SDL_syspower.h">
       <Filter>Header Files\src\power</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\render\SDL_yuv_mmx_c.h">
-      <Filter>Header Files\src\render</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\SDL_dataqueue.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
@@ -698,6 +704,24 @@
     </ClInclude>
     <ClInclude Include="..\include\SDL_config_windows.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\direct3d\SDL_shaders_d3d.h">
+      <Filter>Header Files\src\render\direct3d</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\direct3d11\SDL_shaders_d3d11.h">
+      <Filter>Header Files\src\render\direct3d11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\SDL_yuv_c.h">
+      <Filter>Header Files\src\video</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb.h">
+      <Filter>Header Files\src\video\yuv2rgb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_sse_func.h">
+      <Filter>Header Files\src\video\yuv2rgb</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_std_func.h">
+      <Filter>Header Files\src\video\yuv2rgb</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -801,9 +825,6 @@
       <Filter>Source Files\power\windows</Filter>
     </ClCompile>
     <ClCompile Include="..\src\render\SDL_render.c">
-      <Filter>Source Files\render</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\render\SDL_yuv_mmx.c">
       <Filter>Source Files\render</Filter>
     </ClCompile>
     <ClCompile Include="..\src\render\SDL_yuv_sw.c">
@@ -1045,6 +1066,21 @@
     </ClCompile>
     <ClCompile Include="..\src\joystick\steam\SDL_steamcontroller.c">
       <Filter>Source Files\joystick\steam</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\wasapi\SDL_wasapi_win32.c">
+      <Filter>Source Files\audio\wasapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\direct3d\SDL_shaders_d3d.c">
+      <Filter>Source Files\render\direct3d</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\direct3d11\SDL_shaders_d3d11.c">
+      <Filter>Source Files\render\direct3d11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\SDL_yuv.c">
+      <Filter>Source Files\video</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb.c">
+      <Filter>Source Files\video\yuv2rgb</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
