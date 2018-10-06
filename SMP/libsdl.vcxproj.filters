@@ -235,6 +235,27 @@
     <Filter Include="Source Files\video\yuv2rgb">
       <UniqueIdentifier>{5ae989f1-6235-4e20-86cb-09acb9674d77}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\src\video\winrt">
+      <UniqueIdentifier>{146efd4c-6b92-4ccb-833e-afd4f9b94415}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\render\direct3d11">
+      <UniqueIdentifier>{61847815-4fbe-4dea-9d28-8e8ff9df8b42}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\core\winrt">
+      <UniqueIdentifier>{c6d6f714-3b9d-413a-a3eb-da913166d693}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\core\winrt">
+      <UniqueIdentifier>{137cc61f-d7ac-4457-aaf4-a7b76dbcdc26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\filesystem\winrt">
+      <UniqueIdentifier>{1e2c6c42-fc52-465c-acbb-bd3c1d063ae2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\video\winrt">
+      <UniqueIdentifier>{1581cad1-cde8-4375-9512-d2bb0d11d8e9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\power\winrt">
+      <UniqueIdentifier>{732dcfc7-b3ea-4eb8-b06a-ed77f27bce73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SDL_audio.h">
@@ -723,6 +744,36 @@
     <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_std_func.h">
       <Filter>Header Files\src\video\yuv2rgb</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\video\winrt\SDL_winrtevents_c.h">
+      <Filter>Header Files\src\video\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\winrt\SDL_winrtgamebar_cpp.h">
+      <Filter>Header Files\src\video\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\winrt\SDL_winrtmessagebox.h">
+      <Filter>Header Files\src\video\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\winrt\SDL_winrtmouse_c.h">
+      <Filter>Header Files\src\video\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\winrt\SDL_winrtopengles.h">
+      <Filter>Header Files\src\video\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\video\winrt\SDL_winrtvideo_cpp.h">
+      <Filter>Header Files\src\video\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\direct3d11\SDL_render_winrt.h">
+      <Filter>Header Files\src\render\direct3d11</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\winrt\SDL_winrtapp_common.h">
+      <Filter>Header Files\src\core\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\winrt\SDL_winrtapp_direct3d.h">
+      <Filter>Header Files\src\core\winrt</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\winrt\SDL_winrtapp_xaml.h">
+      <Filter>Header Files\src\core\winrt</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\SDL.c">
@@ -1081,6 +1132,51 @@
     </ClCompile>
     <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb.c">
       <Filter>Source Files\video\yuv2rgb</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\winrt\SDL_winrtapp_common.cpp">
+      <Filter>Source Files\core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\winrt\SDL_winrtapp_direct3d.cpp">
+      <Filter>Source Files\core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\winrt\SDL_winrtapp_xaml.cpp">
+      <Filter>Source Files\core\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\filesystem\winrt\SDL_sysfilesystem.cpp">
+      <Filter>Source Files\filesystem\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\direct3d11\SDL_render_winrt.cpp">
+      <Filter>Source Files\render\direct3d11</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtevents.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtgamebar.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtkeyboard.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtmessagebox.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtmouse.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtopengles.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtpointerinput.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\video\winrt\SDL_winrtvideo.cpp">
+      <Filter>Source Files\video\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\power\winrt\SDL_syspower.cpp">
+      <Filter>Source Files\power\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\audio\wasapi\SDL_wasapi_winrt.cpp">
+      <Filter>Source Files\audio\wasapi</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
