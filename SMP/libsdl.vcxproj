@@ -76,6 +76,7 @@
     <ClInclude Include="..\include\SDL_clipboard.h" />
     <ClInclude Include="..\include\SDL_config.h" />
     <ClInclude Include="..\include\SDL_config_windows.h" />
+    <ClInclude Include="..\include\SDL_config_winrt.h" />
     <ClInclude Include="..\include\SDL_copying.h" />
     <ClInclude Include="..\include\SDL_cpuinfo.h" />
     <ClInclude Include="..\include\SDL_egl.h" />
@@ -113,6 +114,7 @@
     <ClInclude Include="..\include\SDL_revision.h" />
     <ClInclude Include="..\include\SDL_rwops.h" />
     <ClInclude Include="..\include\SDL_scancode.h" />
+    <ClInclude Include="..\include\SDL_sensor.h" />
     <ClInclude Include="..\include\SDL_shape.h" />
     <ClInclude Include="..\include\SDL_stdinc.h" />
     <ClInclude Include="..\include\SDL_surface.h" />
@@ -139,11 +141,13 @@
     <ClInclude Include="..\src\events\blank_cursor.h" />
     <ClInclude Include="..\src\events\default_cursor.h" />
     <ClInclude Include="..\src\events\SDL_clipboardevents_c.h" />
+    <ClInclude Include="..\src\events\SDL_displayevents_c.h" />
     <ClInclude Include="..\src\events\SDL_gesture_c.h" />
     <ClInclude Include="..\src\events\SDL_touch_c.h" />
     <ClInclude Include="..\src\haptic\windows\SDL_dinputhaptic_c.h" />
     <ClInclude Include="..\src\haptic\windows\SDL_windowshaptic_c.h" />
     <ClInclude Include="..\src\haptic\windows\SDL_xinputhaptic_c.h" />
+    <ClInclude Include="..\src\joystick\hidapi\SDL_hidapijoystick_c.h" />
     <ClInclude Include="..\src\joystick\steam\SDL_steamcontroller.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_dinputjoystick_c.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_windowsjoystick_c.h" />
@@ -172,6 +176,9 @@
     <ClInclude Include="..\src\SDL_assert_c.h" />
     <ClInclude Include="..\src\SDL_dataqueue.h" />
     <ClInclude Include="..\src\SDL_internal.h" />
+    <ClInclude Include="..\src\sensor\dummy\SDL_dummysensor.h" />
+    <ClInclude Include="..\src\sensor\SDL_sensor_c.h" />
+    <ClInclude Include="..\src\sensor\SDL_syssensor.h" />
     <ClInclude Include="..\src\video\dummy\SDL_nullframebuffer_c.h" />
     <ClInclude Include="..\src\video\khronos\EGL\egl.h" />
     <ClInclude Include="..\src\video\khronos\EGL\eglext.h" />
@@ -292,6 +299,7 @@
     </ClCompile>
     <ClCompile Include="..\src\dynapi\SDL_dynapi.c" />
     <ClCompile Include="..\src\events\SDL_clipboardevents.c" />
+    <ClCompile Include="..\src\events\SDL_displayevents.c" />
     <ClCompile Include="..\src\events\SDL_gesture.c" />
     <ClCompile Include="..\src\events\SDL_touch.c" />
     <ClCompile Include="..\src\filesystem\windows\SDL_sysfilesystem.c">
@@ -313,6 +321,12 @@
     <ClCompile Include="..\src\haptic\windows\SDL_dinputhaptic.c" />
     <ClCompile Include="..\src\haptic\windows\SDL_windowshaptic.c" />
     <ClCompile Include="..\src\haptic\windows\SDL_xinputhaptic.c" />
+    <ClCompile Include="..\src\hidapi\windows\hid.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapijoystick.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps4.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_switch.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xboxone.c" />
     <ClCompile Include="..\src\joystick\steam\SDL_steamcontroller.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_dinputjoystick.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_windowsjoystick.c" />
@@ -366,6 +380,8 @@
     <ClCompile Include="..\src\SDL_dataqueue.c" />
     <ClCompile Include="..\src\SDL_hints.c" />
     <ClCompile Include="..\src\SDL_log.c" />
+    <ClCompile Include="..\src\sensor\dummy\SDL_dummysensor.c" />
+    <ClCompile Include="..\src\sensor\SDL_sensor.c" />
     <ClCompile Include="..\src\video\dummy\SDL_nullframebuffer.c" />
     <ClCompile Include="..\src\video\SDL_blit.c" />
     <ClCompile Include="..\src\video\SDL_blit_0.c" />
@@ -928,8 +944,8 @@
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -978,7 +994,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>vccorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1024,8 +1040,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1074,7 +1090,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>vccorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1125,9 +1141,9 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1183,7 +1199,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '10.0'">10.0</MinimumRequiredVersion>
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '8.1'">8.1</MinimumRequiredVersion>
       <AdditionalDependencies>vccorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
       <WindowsMetadataFile>$(OutDir)\lib\x86\$(RootNamespace).winmd</WindowsMetadataFile>
     </Link>
     <PostBuildEvent>
@@ -1233,9 +1249,9 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <MinimumRequiredVersion>6.1</MinimumRequiredVersion>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1289,7 +1305,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '10.0'">10.0</MinimumRequiredVersion>
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '8.1'">8.1</MinimumRequiredVersion>
       <AdditionalDependencies>vccorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
       <WindowsMetadataFile>$(OutDir)\lib\x64\$(RootNamespace).winmd</WindowsMetadataFile>
     </Link>
     <PostBuildEvent>
@@ -1343,8 +1359,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x86\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1400,7 +1416,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>vccorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1453,8 +1469,8 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <OutputFile>$(OutDir)\lib\x64\$(TargetName)$(TargetExt)</OutputFile>
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1510,7 +1526,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <TargetMachine>MachineX64</TargetMachine>
       <SubSystem>Windows</SubSystem>
       <AdditionalDependencies>vccorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Lib>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1567,10 +1583,10 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <ImportLibrary>$(OutDir)\lib\x86\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
       <LargeAddressAware>true</LargeAddressAware>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <MinimumRequiredVersion>5.1</MinimumRequiredVersion>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1633,7 +1649,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '10.0'">10.0</MinimumRequiredVersion>
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '8.1'">8.1</MinimumRequiredVersion>
       <AdditionalDependencies>vccorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
       <WindowsMetadataFile>$(OutDir)\lib\x86\$(RootNamespace).winmd</WindowsMetadataFile>
     </Link>
     <PostBuildEvent>
@@ -1690,10 +1706,10 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <SubSystem>Windows</SubSystem>
       <ImportLibrary>$(OutDir)\lib\x64\$(TargetName).lib</ImportLibrary>
       <ProfileGuidedDatabase>$(IntDir)\$(TargetName).pgd</ProfileGuidedDatabase>
-      <AdditionalDependencies>winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>setupapi.lib;winmm.lib;imm32.lib;version.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <MinimumRequiredVersion>6.1</MinimumRequiredVersion>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -1755,7 +1771,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '10.0'">10.0</MinimumRequiredVersion>
       <MinimumRequiredVersion Condition="'$(ApplicationTypeRevision)' == '8.1'">8.1</MinimumRequiredVersion>
       <AdditionalDependencies>vccorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
-      <AdditionalOptions>/IGNORE:4006,4221 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
       <WindowsMetadataFile>$(OutDir)\lib\x64\$(RootNamespace).winmd</WindowsMetadataFile>
     </Link>
     <PostBuildEvent>

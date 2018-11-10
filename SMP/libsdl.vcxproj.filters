@@ -256,6 +256,30 @@
     <Filter Include="Source Files\power\winrt">
       <UniqueIdentifier>{732dcfc7-b3ea-4eb8-b06a-ed77f27bce73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\src\sensor">
+      <UniqueIdentifier>{dd7e9300-0625-46ca-9304-e5f6a3111977}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\sensor\dummy">
+      <UniqueIdentifier>{544c1c22-1251-4de8-8101-4b1b825e127f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sensor">
+      <UniqueIdentifier>{5260cbdf-fae7-4560-a7c9-7408db7fb6ad}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sensor\dummy">
+      <UniqueIdentifier>{d8a7fb55-00de-4ecd-8233-2caaec9f7610}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\joystick\hidapi">
+      <UniqueIdentifier>{75e63a4e-ac69-45d2-bdc9-d44cf6e98dfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick\hidapi">
+      <UniqueIdentifier>{584ac064-af7e-4abc-9907-9a5748161707}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hidapi">
+      <UniqueIdentifier>{55f91eb0-ce43-4b18-b06e-9a8b7623a951}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\hidapi\windows">
+      <UniqueIdentifier>{5f3ac251-2d22-406b-b6fe-ebd0e499dd10}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SDL_audio.h">
@@ -774,6 +798,27 @@
     <ClInclude Include="..\src\core\winrt\SDL_winrtapp_xaml.h">
       <Filter>Header Files\src\core\winrt</Filter>
     </ClInclude>
+    <ClInclude Include="..\include\SDL_sensor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\events\SDL_displayevents_c.h">
+      <Filter>Header Files\src\events</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sensor\SDL_sensor_c.h">
+      <Filter>Header Files\src\sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sensor\SDL_syssensor.h">
+      <Filter>Header Files\src\sensor</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sensor\dummy\SDL_dummysensor.h">
+      <Filter>Header Files\src\sensor\dummy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\joystick\hidapi\SDL_hidapijoystick_c.h">
+      <Filter>Header Files\src\joystick\hidapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_config_winrt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\SDL.c">
@@ -1177,6 +1222,33 @@
     </ClCompile>
     <ClCompile Include="..\src\audio\wasapi\SDL_wasapi_winrt.cpp">
       <Filter>Source Files\audio\wasapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\events\SDL_displayevents.c">
+      <Filter>Source Files\events</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sensor\SDL_sensor.c">
+      <Filter>Source Files\sensor</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sensor\dummy\SDL_dummysensor.c">
+      <Filter>Source Files\sensor\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps4.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_switch.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xboxone.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapijoystick.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hidapi\windows\hid.c">
+      <Filter>Source Files\hidapi\windows</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
