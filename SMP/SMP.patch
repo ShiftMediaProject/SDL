@@ -1,0 +1,46 @@
+diff --git a/src/render/direct3d11/SDL_render_d3d11.c b/src/render/direct3d11/SDL_render_d3d11.c
+index 7a370392f..0806a4f9e 100644
+--- a/src/render/direct3d11/SDL_render_d3d11.c
++++ b/src/render/direct3d11/SDL_render_d3d11.c
+@@ -1124,7 +1124,7 @@ D3D11_Trim(SDL_Renderer * renderer)
+ 
+     result = ID3D11Device_QueryInterface(data->d3dDevice, &SDL_IID_IDXGIDevice3, &dxgiDevice);
+     if (FAILED(result)) {
+-        //WIN_SetErrorFromHRESULT(__FUNCTION__ ", ID3D11Device to IDXGIDevice3", result);
++        //WIN_SetErrorFromHRESULT(SDL_DEBUG(", ID3D11Device to IDXGIDevice3"), result);
+         return;
+     }
+ 
+diff --git a/src/video/winrt/SDL_winrtvideo.cpp b/src/video/winrt/SDL_winrtvideo.cpp
+index 99bfd07b3..7a4e738e1 100644
+--- a/src/video/winrt/SDL_winrtvideo.cpp
++++ b/src/video/winrt/SDL_winrtvideo.cpp
+@@ -42,8 +42,8 @@ using namespace Windows::UI::ViewManagement;
+ 
+ 
+ /* [re]declare Windows GUIDs locally, to limit the amount of external lib(s) SDL has to link to */
+-static const GUID IID_IDisplayRequest   = { 0xe5732044, 0xf49f, 0x4b60, { 0x8d, 0xd4, 0x5e, 0x7e, 0x3a, 0x63, 0x2a, 0xc0 } };
+-static const GUID IID_IDXGIFactory2     = { 0x50c83a1c, 0xe072, 0x4c48, { 0x87, 0xb0, 0x36, 0x30, 0xfa, 0x36, 0xa6, 0xd0 } };
++static const GUID SDL_IID_IDisplayRequest   = { 0xe5732044, 0xf49f, 0x4b60, { 0x8d, 0xd4, 0x5e, 0x7e, 0x3a, 0x63, 0x2a, 0xc0 } };
++static const GUID SDL_IID_IDXGIFactory2     = { 0x50c83a1c, 0xe072, 0x4c48, { 0x87, 0xb0, 0x36, 0x30, 0xfa, 0x36, 0xa6, 0xd0 } };
+ 
+ 
+ /* SDL includes */
+@@ -409,7 +409,7 @@ WINRT_InitModes(_THIS)
+     HRESULT hr;
+     IDXGIFactory2 * dxgiFactory2 = NULL;
+ 
+-    hr = CreateDXGIFactory1(IID_IDXGIFactory2, (void **)&dxgiFactory2);
++    hr = CreateDXGIFactory1(SDL_IID_IDXGIFactory2, (void **)&dxgiFactory2);
+     if (FAILED(hr)) {
+         WIN_SetErrorFromHRESULT(__FUNCTION__ ", CreateDXGIFactory1() failed", hr);
+         return -1;
+@@ -804,7 +804,7 @@ WINRT_CreateDisplayRequest(_THIS)
+         goto done;
+     }
+ 
+-    hr = pDisplayRequestRaw->QueryInterface(IID_IDisplayRequest, (void **) &pDisplayRequest);
++    hr = pDisplayRequestRaw->QueryInterface(SDL_IID_IDisplayRequest, (void **) &pDisplayRequest);
+     if (FAILED(hr)) {
+         goto done;
+     }
