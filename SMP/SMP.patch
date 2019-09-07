@@ -1,8 +1,8 @@
 diff --git a/src/render/direct3d11/SDL_render_d3d11.c b/src/render/direct3d11/SDL_render_d3d11.c
-index 7a370392f..0806a4f9e 100644
+index ef5db8497..4d40c1c62 100644
 --- a/src/render/direct3d11/SDL_render_d3d11.c
 +++ b/src/render/direct3d11/SDL_render_d3d11.c
-@@ -1124,7 +1124,7 @@ D3D11_Trim(SDL_Renderer * renderer)
+@@ -998,7 +998,7 @@ D3D11_Trim(SDL_Renderer * renderer)
  
      result = ID3D11Device_QueryInterface(data->d3dDevice, &SDL_IID_IDXGIDevice3, &dxgiDevice);
      if (FAILED(result)) {
@@ -12,7 +12,7 @@ index 7a370392f..0806a4f9e 100644
      }
  
 diff --git a/src/video/winrt/SDL_winrtvideo.cpp b/src/video/winrt/SDL_winrtvideo.cpp
-index 99bfd07b3..7a4e738e1 100644
+index 87c61c928..638508632 100644
 --- a/src/video/winrt/SDL_winrtvideo.cpp
 +++ b/src/video/winrt/SDL_winrtvideo.cpp
 @@ -42,8 +42,8 @@ using namespace Windows::UI::ViewManagement;
