@@ -25,9 +25,11 @@
     <ClInclude Include="..\include\SDL_keyboard.h" />
     <ClInclude Include="..\include\SDL_keycode.h" />
     <ClInclude Include="..\include\SDL_loadso.h" />
+    <ClInclude Include="..\include\SDL_locale.h" />
     <ClInclude Include="..\include\SDL_log.h" />
     <ClInclude Include="..\include\SDL_main.h" />
     <ClInclude Include="..\include\SDL_messagebox.h" />
+    <ClInclude Include="..\include\SDL_misc.h" />
     <ClInclude Include="..\include\SDL_metal.h" />
     <ClInclude Include="..\include\SDL_mouse.h" />
     <ClInclude Include="..\include\SDL_mutex.h" />
@@ -63,8 +65,13 @@
     <ClInclude Include="..\include\SDL_video.h" />
     <ClInclude Include="..\include\SDL_gamecontroller.h" />
     <ClInclude Include="..\include\SDL_vulkan.h" />
+    <ClInclude Include="..\src\audio\winmm\SDL_winmm.h" />
+    <ClInclude Include="..\src\audio\disk\SDL_diskaudio.h" />
+    <ClInclude Include="..\src\audio\dummy\SDL_dummyaudio.h" />
+    <ClInclude Include="..\src\audio\directsound\SDL_directsound.h" />
     <ClInclude Include="..\src\audio\wasapi\SDL_wasapi.h" />
     <ClInclude Include="..\src\core\windows\SDL_directx.h" />
+    <ClInclude Include="..\src\core\windows\SDL_hid.h" />
     <ClInclude Include="..\src\core\windows\SDL_windows.h" />
     <ClInclude Include="..\src\core\windows\SDL_xinput.h" />
     <ClInclude Include="..\src\core\winrt\SDL_winrtapp_common.h" />
@@ -82,17 +89,23 @@
     <ClInclude Include="..\src\haptic\windows\SDL_dinputhaptic_c.h" />
     <ClInclude Include="..\src\haptic\windows\SDL_windowshaptic_c.h" />
     <ClInclude Include="..\src\haptic\windows\SDL_xinputhaptic_c.h" />
+    <ClInclude Include="..\src\hidapi\hidapi\hidapi.h" />
     <ClInclude Include="..\src\joystick\controller_type.h" />
     <ClInclude Include="..\src\joystick\hidapi\SDL_hidapijoystick_c.h" />
     <ClInclude Include="..\src\joystick\hidapi\SDL_hidapi_rumble.h" />
     <ClInclude Include="..\src\joystick\hidapi\steam\controller_constants.h" />
     <ClInclude Include="..\src\joystick\hidapi\steam\controller_structs.h" />
+    <ClInclude Include="..\src\joystick\SDL_gamecontrollerdb.h" />
     <ClInclude Include="..\src\joystick\steam\SDL_steamcontroller.h" />
     <ClInclude Include="..\src\joystick\usb_ids.h" />
+    <ClInclude Include="..\src\joystick\virtual\SDL_virtualjoystick_c.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_dinputjoystick_c.h" />
+    <ClInclude Include="..\src\joystick\windows\SDL_rawinputjoystick_c.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_windowsjoystick_c.h" />
     <ClInclude Include="..\src\joystick\windows\SDL_xinputjoystick_c.h" />
     <ClInclude Include="..\src\libm\math_libm.h" />
+    <ClInclude Include="..\src\locale\SDL_syslocale.h" />
+    <ClInclude Include="..\src\misc\SDL_sysurl.h" />
     <ClInclude Include="..\src\power\SDL_syspower.h" />
     <ClInclude Include="..\src\render\direct3d11\SDL_shaders_d3d11.h" />
     <ClInclude Include="..\src\render\direct3d\SDL_shaders_d3d.h" />
@@ -120,6 +133,7 @@
     <ClInclude Include="..\src\sensor\dummy\SDL_dummysensor.h" />
     <ClInclude Include="..\src\sensor\SDL_sensor_c.h" />
     <ClInclude Include="..\src\sensor\SDL_syssensor.h" />
+    <ClInclude Include="..\src\sensor\windows\SDL_windowssensor.h" />
     <ClInclude Include="..\src\video\dummy\SDL_nullframebuffer_c.h" />
     <ClInclude Include="..\src\video\khronos\EGL\egl.h" />
     <ClInclude Include="..\src\video\khronos\EGL\eglext.h" />
@@ -142,10 +156,6 @@
     <ClInclude Include="..\src\video\SDL_blit_slow.h" />
     <ClInclude Include="..\src\video\SDL_egl_c.h" />
     <ClInclude Include="..\src\video\SDL_shape_internals.h" />
-    <ClInclude Include="..\src\audio\winmm\SDL_winmm.h" />
-    <ClInclude Include="..\src\audio\disk\SDL_diskaudio.h" />
-    <ClInclude Include="..\src\audio\dummy\SDL_dummyaudio.h" />
-    <ClInclude Include="..\src\audio\directsound\SDL_directsound.h" />
     <ClInclude Include="..\src\SDL_error_c.h" />
     <ClInclude Include="..\src\events\SDL_events_c.h" />
     <ClInclude Include="..\src\joystick\SDL_joystick_c.h" />
@@ -195,6 +205,16 @@
     <ClInclude Include="..\src\video\winrt\SDL_winrtvideo_cpp.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="..\src\atomic\SDL_atomic.c" />
+    <ClCompile Include="..\src\atomic\SDL_spinlock.c" />
+    <ClCompile Include="..\src\audio\SDL_audio.c" />
+    <ClCompile Include="..\src\audio\SDL_audiocvt.c" />
+    <ClCompile Include="..\src\audio\SDL_audiodev.c" />
+    <ClCompile Include="..\src\audio\SDL_audiotypecvt.c" />
+    <ClCompile Include="..\src\audio\winmm\SDL_winmm.c" />
+    <ClCompile Include="..\src\audio\disk\SDL_diskaudio.c" />
+    <ClCompile Include="..\src\audio\dummy\SDL_dummyaudio.c" />
+    <ClCompile Include="..\src\audio\directsound\SDL_directsound.c" />
     <ClCompile Include="..\src\audio\wasapi\SDL_wasapi.c" />
     <ClCompile Include="..\src\audio\wasapi\SDL_wasapi_win32.c">
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLLWinRT'">true</ExcludedFromBuild>
@@ -212,6 +232,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\core\windows\SDL_hid.c" />
     <ClCompile Include="..\src\core\windows\SDL_windows.c" />
     <ClCompile Include="..\src\core\windows\SDL_xinput.c" />
     <ClCompile Include="..\src\core\winrt\SDL_winrtapp_common.cpp">
@@ -265,22 +286,59 @@
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
+    <ClCompile Include="..\src\haptic\dummy\SDL_syshaptic.c" />
     <ClCompile Include="..\src\haptic\windows\SDL_dinputhaptic.c" />
     <ClCompile Include="..\src\haptic\windows\SDL_windowshaptic.c" />
     <ClCompile Include="..\src\haptic\windows\SDL_xinputhaptic.c" />
-    <ClCompile Include="..\src\hidapi\windows\hid.c" />
+    <ClCompile Include="..\src\hidapi\SDL_hidapi.c" />
+    <ClCompile Include="..\src\joystick\dummy\SDL_sysjoystick.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapijoystick.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_gamecube.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps4.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps5.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_rumble.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_switch.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xboxone.c" />
     <ClCompile Include="..\src\joystick\steam\SDL_steamcontroller.c" />
+    <ClCompile Include="..\src\joystick\virtual\SDL_virtualjoystick.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_dinputjoystick.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_rawinputjoystick.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_windowsjoystick.c" />
+    <ClCompile Include="..\src\joystick\windows\SDL_windows_gaming_input.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_xinputjoystick.c" />
+    <ClCompile Include="..\src\loadso\windows\SDL_sysloadso.c" />
+    <ClCompile Include="..\src\locale\SDL_locale.c" />
+    <ClCompile Include="..\src\locale\windows\SDL_syslocale.c">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLLWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\locale\winrt\SDL_syslocale.c">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\misc\SDL_url.c" />
+    <ClCompile Include="..\src\misc\windows\SDL_sysurl.c">
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLLWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugWinRT'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="..\src\misc\winrt\SDL_sysurl.cpp">
+      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="..\src\power\winrt\SDL_syspower.cpp">
       <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
       <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
@@ -321,17 +379,19 @@
     <ClCompile Include="..\src\render\software\SDL_rotate.c" />
     <ClCompile Include="..\src\SDL.c" />
     <ClCompile Include="..\src\SDL_assert.c" />
-    <ClCompile Include="..\src\atomic\SDL_atomic.c" />
-    <ClCompile Include="..\src\atomic\SDL_spinlock.c" />
-    <ClCompile Include="..\src\audio\SDL_audio.c" />
-    <ClCompile Include="..\src\audio\SDL_audiocvt.c" />
-    <ClCompile Include="..\src\audio\SDL_audiodev.c" />
-    <ClCompile Include="..\src\audio\SDL_audiotypecvt.c" />
     <ClCompile Include="..\src\SDL_dataqueue.c" />
     <ClCompile Include="..\src\SDL_hints.c" />
     <ClCompile Include="..\src\SDL_log.c" />
     <ClCompile Include="..\src\sensor\dummy\SDL_dummysensor.c" />
     <ClCompile Include="..\src\sensor\SDL_sensor.c" />
+    <ClCompile Include="..\src\sensor\windows\SDL_windowssensor.c" />
+    <ClCompile Include="..\src\stdlib\SDL_crc32.c" />
+    <ClCompile Include="..\src\stdlib\SDL_getenv.c" />
+    <ClCompile Include="..\src\stdlib\SDL_iconv.c" />
+    <ClCompile Include="..\src\stdlib\SDL_malloc.c" />
+    <ClCompile Include="..\src\stdlib\SDL_qsort.c" />
+    <ClCompile Include="..\src\stdlib\SDL_stdlib.c" />
+    <ClCompile Include="..\src\stdlib\SDL_string.c" />
     <ClCompile Include="..\src\stdlib\SDL_strtokr.c" />
     <ClCompile Include="..\src\video\dummy\SDL_nullframebuffer.c" />
     <ClCompile Include="..\src\video\SDL_blit.c" />
@@ -347,20 +407,13 @@
     <ClCompile Include="..\src\video\SDL_clipboard.c" />
     <ClCompile Include="..\src\video\SDL_egl.c" />
     <ClCompile Include="..\src\video\SDL_shape.c" />
-    <ClCompile Include="..\src\audio\winmm\SDL_winmm.c" />
-    <ClCompile Include="..\src\audio\disk\SDL_diskaudio.c" />
-    <ClCompile Include="..\src\audio\dummy\SDL_dummyaudio.c" />
-    <ClCompile Include="..\src\audio\directsound\SDL_directsound.c" />
     <ClCompile Include="..\src\events\SDL_dropevents.c" />
     <ClCompile Include="..\src\SDL_error.c" />
     <ClCompile Include="..\src\events\SDL_events.c" />
     <ClCompile Include="..\src\video\SDL_fillrect.c" />
-    <ClCompile Include="..\src\stdlib\SDL_getenv.c" />
     <ClCompile Include="..\src\haptic\SDL_haptic.c" />
-    <ClCompile Include="..\src\stdlib\SDL_iconv.c" />
     <ClCompile Include="..\src\joystick\SDL_joystick.c" />
     <ClCompile Include="..\src\events\SDL_keyboard.c" />
-    <ClCompile Include="..\src\stdlib\SDL_malloc.c" />
     <ClCompile Include="..\src\audio\SDL_mixer.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_mmjoystick.c" />
     <ClCompile Include="..\src\events\SDL_mouse.c" />
@@ -368,17 +421,13 @@
     <ClCompile Include="..\src\video\dummy\SDL_nullvideo.c" />
     <ClCompile Include="..\src\video\SDL_pixels.c" />
     <ClCompile Include="..\src\power\SDL_power.c" />
-    <ClCompile Include="..\src\stdlib\SDL_qsort.c" />
     <ClCompile Include="..\src\events\SDL_quit.c" />
     <ClCompile Include="..\src\video\SDL_rect.c" />
     <ClCompile Include="..\src\video\SDL_RLEaccel.c" />
     <ClCompile Include="..\src\file\SDL_rwops.c" />
-    <ClCompile Include="..\src\stdlib\SDL_stdlib.c" />
     <ClCompile Include="..\src\video\SDL_stretch.c" />
-    <ClCompile Include="..\src\stdlib\SDL_string.c" />
     <ClCompile Include="..\src\video\SDL_surface.c" />
     <ClCompile Include="..\src\thread\generic\SDL_syscond.c" />
-    <ClCompile Include="..\src\loadso\windows\SDL_sysloadso.c" />
     <ClCompile Include="..\src\thread\windows\SDL_sysmutex.c" />
     <ClCompile Include="..\src\power\windows\SDL_syspower.c">
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLLWinRT'">true</ExcludedFromBuild>

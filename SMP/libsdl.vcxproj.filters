@@ -274,14 +274,59 @@
     <Filter Include="Source Files\hidapi">
       <UniqueIdentifier>{55f91eb0-ce43-4b18-b06e-9a8b7623a951}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\hidapi\windows">
-      <UniqueIdentifier>{5f3ac251-2d22-406b-b6fe-ebd0e499dd10}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\src\joystick\hidapi">
       <UniqueIdentifier>{5daa33b9-9086-4071-9c58-bf03ba3c2f05}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\src\joystick\hidapi\steam">
       <UniqueIdentifier>{b6e32bbf-de8e-4272-8326-39d05dda769e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick\virtual">
+      <UniqueIdentifier>{74a1b4e3-8684-4e6c-9ebe-431919519788}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\joystick\virtual">
+      <UniqueIdentifier>{1f458eb8-1116-49d3-9275-2bd0631463c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\locale">
+      <UniqueIdentifier>{a6f3e8cd-090a-48f1-a559-9338fc61709c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\locale">
+      <UniqueIdentifier>{38929b6a-34ed-4c92-a368-7872f104451f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\locale\windows">
+      <UniqueIdentifier>{c33ab804-edeb-4b9e-9e20-f8112d792e4c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\locale\winrt">
+      <UniqueIdentifier>{69f57f0d-834d-4839-b8d3-f7540f1c36f8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc">
+      <UniqueIdentifier>{37854c86-000e-422d-9823-54dc32ce1760}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc\windows">
+      <UniqueIdentifier>{d0a82f65-fefb-4b7e-9210-6f3db02cafbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\misc\winrt">
+      <UniqueIdentifier>{f808585f-1766-4513-b244-ed338dd3cbf9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\misc">
+      <UniqueIdentifier>{7006d50d-8148-4cdc-937c-124d004530bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\hidapi">
+      <UniqueIdentifier>{68cd6e4f-e45b-4d93-9174-bee2b25240b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\hidapi\hidapi">
+      <UniqueIdentifier>{b15b5daf-f1bd-4595-8445-6a1d865f5d00}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\src\sensor\windows">
+      <UniqueIdentifier>{a7dcaa6f-124d-4b6c-8348-02d9b2ccdb47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sensor\windows">
+      <UniqueIdentifier>{1fafe9c6-4ac8-4968-8b4c-92991dc6720f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\joystick\dummy">
+      <UniqueIdentifier>{156154fc-3995-46d6-8e54-2613d4e233b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\haptic\dummy">
+      <UniqueIdentifier>{05454e91-8d43-4e52-ac0f-fc1c7b5abaed}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -861,6 +906,36 @@
     <ClInclude Include="..\src\joystick\usb_ids.h">
       <Filter>Header Files\src\joystick</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\core\windows\SDL_hid.h">
+      <Filter>Header Files\src\core\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\joystick\virtual\SDL_virtualjoystick_c.h">
+      <Filter>Header Files\src\joystick\virtual</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\joystick\windows\SDL_rawinputjoystick_c.h">
+      <Filter>Header Files\src\joystick\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\locale\SDL_syslocale.h">
+      <Filter>Header Files\src\locale</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\hidapi\hidapi\hidapi.h">
+      <Filter>Header Files\src\hidapi\hidapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_locale.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\sensor\windows\SDL_windowssensor.h">
+      <Filter>Header Files\src\sensor\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\joystick\SDL_gamecontrollerdb.h">
+      <Filter>Header Files\src\joystick</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\misc\SDL_sysurl.h">
+      <Filter>Header Files\src\misc</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\SDL.c">
@@ -1289,9 +1364,6 @@
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapijoystick.c">
       <Filter>Source Files\joystick\hidapi</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\hidapi\windows\hid.c">
-      <Filter>Source Files\hidapi\windows</Filter>
-    </ClCompile>
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_gamecube.c">
       <Filter>Source Files\joystick\hidapi</Filter>
     </ClCompile>
@@ -1303,6 +1375,54 @@
     </ClCompile>
     <ClCompile Include="..\src\stdlib\SDL_strtokr.c">
       <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\windows\SDL_hid.c">
+      <Filter>Source Files\core\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps5.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\virtual\SDL_virtualjoystick.c">
+      <Filter>Source Files\joystick\virtual</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\windows\SDL_rawinputjoystick.c">
+      <Filter>Source Files\joystick\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\windows\SDL_windows_gaming_input.c">
+      <Filter>Source Files\joystick\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locale\SDL_locale.c">
+      <Filter>Source Files\locale</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locale\windows\SDL_syslocale.c">
+      <Filter>Source Files\locale\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\misc\SDL_url.c">
+      <Filter>Source Files\misc</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\misc\windows\SDL_sysurl.c">
+      <Filter>Source Files\misc\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\sensor\windows\SDL_windowssensor.c">
+      <Filter>Source Files\sensor\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\dummy\SDL_sysjoystick.c">
+      <Filter>Source Files\joystick\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\haptic\dummy\SDL_syshaptic.c">
+      <Filter>Source Files\haptic\dummy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\hidapi\SDL_hidapi.c">
+      <Filter>Source Files\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\locale\winrt\SDL_syslocale.c">
+      <Filter>Source Files\locale\winrt</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_crc32.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\misc\winrt\SDL_sysurl.cpp">
+      <Filter>Source Files\misc\winrt</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

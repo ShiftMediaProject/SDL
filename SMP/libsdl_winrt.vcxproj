@@ -22,7 +22,6 @@
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -60,7 +59,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -98,7 +96,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -136,7 +133,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -174,7 +170,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -212,7 +207,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -250,7 +244,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
@@ -288,7 +281,6 @@ del /f /q $(OutDir)\licenses\libsdl.txt
       <Command>mkdir "$(OutDir)"\include
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
-copy .\include\SDL_config.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
 copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
