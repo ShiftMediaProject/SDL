@@ -23,7 +23,7 @@
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -60,7 +60,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -97,7 +97,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -134,7 +134,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -171,7 +171,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -208,7 +208,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -245,7 +245,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
@@ -282,7 +282,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
 mkdir "$(OutDir)"\include\SDL
 copy ..\include\*.h "$(OutDir)"\include\SDL
 mkdir $(OutDir)\licenses
-copy ..\COPYING.txt $(OutDir)\licenses\libsdl.txt</Command>
+copy ..\LICENSE.txt $(OutDir)\licenses\libsdl.txt</Command>
     </PostBuildEvent>
     <PreBuildEvent>
       <Command>if exist "$(OutDir)"\include\SDL (
