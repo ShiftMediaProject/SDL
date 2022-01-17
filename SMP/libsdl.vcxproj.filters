@@ -936,11 +936,17 @@
     <ClInclude Include="..\src\misc\SDL_sysurl.h">
       <Filter>Header Files\src\misc</Filter>
     </ClInclude>
-    <ClInclude Include="..\src\hidapi\SDL_hidapi.h">
-      <Filter>Header Files\src\hidapi</Filter>
-    </ClInclude>
     <ClInclude Include="..\src\thread\windows\SDL_sysmutex_c.h">
       <Filter>Header Files\src\thread\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_hidapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\hidapi\SDL_hidapi_c.h">
+      <Filter>Header Files\src\hidapi</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\software\SDL_triangle.h">
+      <Filter>Header Files\src\render\software</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -1436,8 +1442,11 @@
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_stadia.c">
       <Filter>Source Files\joystick\hidapi</Filter>
     </ClCompile>
-    <ClCompile Include="..\src\thread\windows\SDL_syscond_srw.c">
-      <Filter>Source Files\thread\windows</Filter>
+    <ClCompile Include="..\src\thread\windows\SDL_syscond_cv.c">
+      <Filter>Header Files\src\thread\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\software\SDL_triangle.c">
+      <Filter>Source Files\render\software</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
