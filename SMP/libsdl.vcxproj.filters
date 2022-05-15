@@ -948,6 +948,9 @@
     <ClInclude Include="..\src\render\software\SDL_triangle.h">
       <Filter>Header Files\src\render\software</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\SDL_list.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\SDL.c">
@@ -1036,9 +1039,6 @@
     </ClCompile>
     <ClCompile Include="..\src\joystick\SDL_joystick.c">
       <Filter>Source Files\joystick</Filter>
-    </ClCompile>
-    <ClCompile Include="..\src\joystick\windows\SDL_mmjoystick.c">
-      <Filter>Source Files\joystick\windows</Filter>
     </ClCompile>
     <ClCompile Include="..\src\loadso\windows\SDL_sysloadso.c">
       <Filter>Source Files\loadso\windows</Filter>
@@ -1447,6 +1447,9 @@
     </ClCompile>
     <ClCompile Include="..\src\render\software\SDL_triangle.c">
       <Filter>Source Files\render\software</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SDL_list.c">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
