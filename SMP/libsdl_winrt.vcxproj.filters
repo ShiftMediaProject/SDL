@@ -328,6 +328,12 @@
     <Filter Include="Source Files\haptic\dummy">
       <UniqueIdentifier>{05454e91-8d43-4e52-ac0f-fc1c7b5abaed}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\src\render\direct3d12">
+      <UniqueIdentifier>{3d8021c7-fdec-403a-b581-afd748d2497c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\render\direct3d12">
+      <UniqueIdentifier>{1e3e7f75-4f78-48c3-8edb-c8b1d28d4dec}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\include\SDL_audio.h">
@@ -511,9 +517,6 @@
       <Filter>Header Files\src\events</Filter>
     </ClInclude>
     <ClInclude Include="..\src\events\SDL_mouse_c.h">
-      <Filter>Header Files\src\events</Filter>
-    </ClInclude>
-    <ClInclude Include="..\src\events\SDL_sysevents.h">
       <Filter>Header Files\src\events</Filter>
     </ClInclude>
     <ClInclude Include="..\src\events\SDL_windowevents_c.h">
@@ -949,6 +952,18 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="..\src\SDL_list.h">
+      <Filter>Header Files\src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SDL_guid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\core\windows\SDL_immdevice.h">
+      <Filter>Header Files\src\core\windows</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\render\direct3d12\SDL_shaders_d3d12.h">
+      <Filter>Header Files\src\render\direct3d12</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SDL_log_c.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
   </ItemGroup>
@@ -1450,6 +1465,36 @@
     </ClCompile>
     <ClCompile Include="..\src\SDL_list.c">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_crc16.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\stdlib\SDL_mslibc.c">
+      <Filter>Source Files\stdlib</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SDL_utils.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\core\windows\SDL_immdevice.c">
+      <Filter>Source Files\core\windows</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SDL_guid.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\direct3d12\SDL_shaders_d3d12.c">
+      <Filter>Source Files\render\direct3d12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\render\direct3d12\SDL_render_d3d12.c">
+      <Filter>Source Files\render\direct3d12</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\controller_type.c">
+      <Filter>Source Files\joystick</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_shield.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_combined.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
