@@ -82,7 +82,7 @@ endif()
 # See docs/release_checklist.md
 set(SDL_MAJOR_VERSION 2)
 set(SDL_MINOR_VERSION 24)
-set(SDL_MICRO_VERSION 1)
+set(SDL_MICRO_VERSION 2)
 set(SDL_VERSION "${SDL_MAJOR_VERSION}.${SDL_MINOR_VERSION}.${SDL_MICRO_VERSION}")
 
 # Set defaults preventing destination file conflicts
@@ -483,7 +483,7 @@ endforeach()
 set_option(SDL_WAYLAND             "Use Wayland video driver" ${UNIX_SYS})
 dep_option(SDL_WAYLAND_SHARED      "Dynamically load Wayland support" ON "SDL_WAYLAND" OFF)
 dep_option(SDL_WAYLAND_LIBDECOR    "Use client-side window decorations on Wayland" ON "SDL_WAYLAND" OFF)
-dep_option(SDL_WAYLAND_LIBDECOR_SHARED     "Dynamically load libdecor support" ON "SDL_WAYLAND_LIBDECOR" OFF)
+dep_option(SDL_WAYLAND_LIBDECOR_SHARED     "Dynamically load libdecor support" ON "SDL_WAYLAND_LIBDECOR;SDL_WAYLAND_SHARED" OFF)
 dep_option(SDL_WAYLAND_QT_TOUCH    "QtWayland server support for Wayland video driver" ON "SDL_WAYLAND" OFF)
 set_option(SDL_RPI                 "Use Raspberry Pi video driver" ${UNIX_SYS})
 set_option(SDL_COCOA               "Use Cocoa video driver" ${APPLE})

@@ -13,7 +13,7 @@ dnl Set various version strings - taken gratefully from the GTk sources
 # See docs/release_checklist.md
 SDL_MAJOR_VERSION=2
 SDL_MINOR_VERSION=24
-SDL_MICRO_VERSION=1
+SDL_MICRO_VERSION=2
 SDL_VERSION=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION.$SDL_MICRO_VERSION
 
 SDL_BINARY_AGE=`expr $SDL_MINOR_VERSION \* 100 + $SDL_MICRO_VERSION`
@@ -71,7 +71,7 @@ if [ test -z "$AWK" ]; then
 fi
 
 AC_CHECK_PROGS([SORT], [gsort sort], [false])
-AS_IF([! "$SORT" -V </dev/null >/dev/null], [AC_MSG_ERROR([GNU sort(1) is required])])
+AS_IF([! "$SORT" -V </dev/null >/dev/null], [AC_MSG_WARN([sort(1) that supports the -V option is required to find dynamic libraries])])
 
 dnl 64-bit file offsets if possible unless --disable-largefile is specified
 AC_SYS_LARGEFILE
