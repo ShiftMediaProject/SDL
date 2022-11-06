@@ -13,7 +13,7 @@ dnl Set various version strings - taken gratefully from the GTk sources
 # See docs/release_checklist.md
 SDL_MAJOR_VERSION=2
 SDL_MINOR_VERSION=24
-SDL_MICRO_VERSION=0
+SDL_MICRO_VERSION=1
 SDL_VERSION=$SDL_MAJOR_VERSION.$SDL_MINOR_VERSION.$SDL_MICRO_VERSION
 
 SDL_BINARY_AGE=`expr $SDL_MINOR_VERSION \* 100 + $SDL_MICRO_VERSION`
@@ -69,6 +69,9 @@ PKG_PROG_PKG_CONFIG
 if [ test -z "$AWK" ]; then
     AC_MSG_ERROR([*** awk not found, aborting])
 fi
+
+AC_CHECK_PROGS([SORT], [gsort sort], [false])
+AS_IF([! "$SORT" -V </dev/null >/dev/null], [AC_MSG_ERROR([GNU sort(1) is required])])
 
 dnl 64-bit file offsets if possible unless --disable-largefile is specified
 AC_SYS_LARGEFILE
@@ -186,7 +189,7 @@ find_lib()
         host_lib_path="/usr/$base_libdir /usr/local/$base_libdir"
     fi
     for path in $env_lib_path $gcc_bin_path $gcc_lib_path $host_lib_path; do
-        lib=[`ls -- $path/$1 2>/dev/null | sed 's,.*/,,' | sort -V -r | $AWK 'BEGIN{FS="."}{ print NF, $0 }' | sort -n -s | sed 's,[0-9]* ,,' | head -1`]
+        lib=[`ls -- $path/$1 2>/dev/null | sed 's,.*/,,' | "$SORT" -V -r | $AWK 'BEGIN{FS="."}{ print NF, $0 }' | "$SORT" -n -s | sed 's,[0-9]* ,,' | head -1`]
         if test x$lib != x; then
             echo $lib
             return
@@ -331,14 +334,6 @@ dnl Check for defines
     AC_FUNC_ALLOCA
 
 dnl Checks for library functions.
-    AC_FUNC_MEMCMP
-    if test x$ac_cv_func_memcmp_working = xyes; then
-        AC_DEFINE(HAVE_MEMCMP, 1, [ ])
-    fi
-    AC_FUNC_STRTOD
-    if test x$ac_cv_func_strtod = xyes; then
-        AC_DEFINE(HAVE_STRTOD, 1, [ ])
-    fi
     AC_CHECK_FUNC(mprotect,
         AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
           #include <sys/types.h>
@@ -347,7 +342,7 @@ dnl Checks for library functions.
         AC_DEFINE(HAVE_MPROTECT, 1, [ ])
         ],[]),
     )
-    AC_CHECK_FUNCS(malloc calloc realloc free getenv setenv putenv unsetenv bsearch qsort abs bcopy memset memcpy memmove wcslen wcslcpy wcslcat _wcsdup wcsdup wcsstr wcscmp wcsncmp wcscasecmp _wcsicmp wcsncasecmp _wcsnicmp strlen strlcpy strlcat _strrev _strupr _strlwr index rindex strchr strrchr strstr strtok_r itoa _ltoa _uitoa _ultoa strtol strtoul _i64toa _ui64toa strtoll strtoull atoi atof strcmp strncmp _stricmp strcasecmp _strnicmp strncasecmp vsscanf vsnprintf fopen64 fseeko fseeko64 sigaction setjmp nanosleep sysconf sysctlbyname getauxval elf_aux_info poll _Exit)
+    AC_CHECK_FUNCS(malloc calloc realloc free getenv setenv putenv unsetenv bsearch qsort abs bcopy memset memcmp memcpy memmove wcslen wcslcpy wcslcat _wcsdup wcsdup wcsstr wcscmp wcsncmp wcscasecmp _wcsicmp wcsncasecmp _wcsnicmp strlen strlcpy strlcat _strrev _strupr _strlwr index rindex strchr strrchr strstr strtok_r itoa _ltoa _uitoa _ultoa strtod strtol strtoul _i64toa _ui64toa strtoll strtoull atoi atof strcmp strncmp _stricmp strcasecmp _strnicmp strncasecmp vsscanf vsnprintf fopen64 fseeko fseeko64 sigaction setjmp nanosleep sysconf sysctlbyname getauxval elf_aux_info poll _Exit)
 
     AC_CHECK_LIB(m, pow, [LIBS="$LIBS -lm"; EXTRA_LDFLAGS="$EXTRA_LDFLAGS -lm"])
     AC_CHECK_FUNCS(acos acosf asin asinf atan atanf atan2 atan2f ceil ceilf copysign copysignf cos cosf exp expf fabs fabsf floor floorf trunc truncf fmod fmodf log logf log10 log10f lround lroundf pow powf round roundf scalbn scalbnf sin sinf sqrt sqrtf tan tanf)
@@ -1062,7 +1057,10 @@ CheckESD()
 [AS_HELP_STRING([--enable-esd], [support the Enlightened Sound Daemon [default=yes]])],
                   , enable_esd=yes)
     if test x$enable_audio = xyes -a x$enable_esd = xyes; then
-        AM_PATH_ESD(0.2.8, have_esd=yes, have_esd=no)
+        PKG_CHECK_MODULES([ESD], [esound >= 0.2.8], have_esd=yes, have_esd=no)
+        if test x$have_esd = xno; then
+           AM_PATH_ESD(0.2.8, have_esd=yes, have_esd=no)
+        fi
         if test x$have_esd = xyes; then
             AC_ARG_ENABLE(esd-shared,
 [AS_HELP_STRING([--enable-esd-shared], [dynamically load ESD audio support [default=yes]])],
@@ -1514,6 +1512,26 @@ CheckObjectiveCARC()
 
     if test x$have_clang_objc_arc = xyes; then
         EXTRA_CFLAGS="$EXTRA_CFLAGS -fobjc-arc"
+    fi
+}
+
+dnl See if GCC's -gdwarf-4 is supported
+dnl See https://gcc.gnu.org/bugzilla/show_bug.cgi?id=101377 for why this is needed on Windows
+CheckGDwarf4()
+{
+    AC_MSG_CHECKING(for GCC -gdwarf-4 option)
+    have_gcc_gdwarf4=no
+
+    save_CFLAGS="$CFLAGS"
+    CFLAGS="$save_CFLAGS -gdwarf-4"
+    AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
+    int x = 0;
+    ]],[])], [have_gcc_gdwarf4=yes],[])
+    AC_MSG_RESULT($have_gcc_gdwarf4)
+    CFLAGS="$save_CFLAGS"
+
+    if test x$have_gcc_gdwarf4 = xyes; then
+        EXTRA_CFLAGS="$EXTRA_CFLAGS -gdwarf-4"
     fi
 }
 
@@ -2725,6 +2743,7 @@ CheckInputKD()
     AC_COMPILE_IFELSE([AC_LANG_PROGRAM([[
       #include <linux/kd.h>
       #include <linux/keyboard.h>
+      #include <sys/ioctl.h>
     ]], [[
         struct kbentry kbe;
         kbe.kb_table = KG_CTRL;
@@ -3578,6 +3597,7 @@ CheckHIDAPI()
 
         if test x$hidapi_support = xyes; then
             if test x$have_libusb_h = xyes; then
+                AC_DEFINE(HAVE_LIBUSB)
                 EXTRA_CFLAGS="$EXTRA_CFLAGS $LIBUSB_CFLAGS"
                 if test x$require_hidapi_libusb = xyes; then
                     EXTRA_LDFLAGS="$EXTRA_LDFLAGS $LIBUSB_LIBS"
@@ -3968,6 +3988,7 @@ case "$host" in
         if test x$enable_loadso = xyes; then
             have_loadso=yes
         fi
+        CheckGDwarf4
         CheckDeclarationAfterStatement
         CheckDummyVideo
         CheckOffscreenVideo
