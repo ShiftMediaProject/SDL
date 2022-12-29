@@ -96,6 +96,7 @@
     <ClInclude Include="..\src\hidapi\SDL_hidapi_c.h" />
     <ClInclude Include="..\src\joystick\controller_type.h" />
     <ClInclude Include="..\src\joystick\hidapi\SDL_hidapijoystick_c.h" />
+    <ClInclude Include="..\src\joystick\hidapi\SDL_hidapi_nintendo.h" />
     <ClInclude Include="..\src\joystick\hidapi\SDL_hidapi_rumble.h" />
     <ClInclude Include="..\src\joystick\hidapi\steam\controller_constants.h" />
     <ClInclude Include="..\src\joystick\hidapi\steam\controller_structs.h" />
@@ -306,15 +307,18 @@
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_combined.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_gamecube.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_luna.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps3.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps4.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps5.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_rumble.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_shield.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_stadia.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_steam.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_switch.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xboxone.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_wii.c" />
     <ClCompile Include="..\src\joystick\steam\SDL_steamcontroller.c" />
     <ClCompile Include="..\src\joystick\virtual\SDL_virtualjoystick.c" />
     <ClCompile Include="..\src\joystick\windows\SDL_dinputjoystick.c" />

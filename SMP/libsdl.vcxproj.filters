@@ -966,6 +966,9 @@
     <ClInclude Include="..\src\SDL_log_c.h">
       <Filter>Header Files\src</Filter>
     </ClInclude>
+    <ClInclude Include="..\src\joystick\hidapi\SDL_hidapi_nintendo.h">
+      <Filter>Header Files\src\joystick\hidapi</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\src\SDL.c">
@@ -1494,6 +1497,15 @@
       <Filter>Source Files\joystick\hidapi</Filter>
     </ClCompile>
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_combined.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_wii.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_ps3.c">
+      <Filter>Source Files\joystick\hidapi</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_steam.c">
       <Filter>Source Files\joystick\hidapi</Filter>
     </ClCompile>
   </ItemGroup>
