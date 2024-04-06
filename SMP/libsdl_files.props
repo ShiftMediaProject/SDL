@@ -101,6 +101,7 @@
     <ClInclude Include="..\src\joystick\hidapi\steam\controller_constants.h" />
     <ClInclude Include="..\src\joystick\hidapi\steam\controller_structs.h" />
     <ClInclude Include="..\src\joystick\SDL_gamecontrollerdb.h" />
+    <ClInclude Include="..\src\joystick\SDL_steam_virtual_gamepad.h" />
     <ClInclude Include="..\src\joystick\steam\SDL_steamcontroller.h" />
     <ClInclude Include="..\src\joystick\usb_ids.h" />
     <ClInclude Include="..\src\joystick\virtual\SDL_virtualjoystick_c.h" />
@@ -203,7 +204,13 @@
     <ClInclude Include="..\src\events\SDL_windowevents_c.h" />
     <ClInclude Include="..\src\video\windows\wmmsg.h" />
     <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb.h" />
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_common.h" />
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_internal.h" />
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_lsx.h" />
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_lsx_func.h" />
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_sse.h" />
     <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_sse_func.h" />
+    <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_std.h" />
     <ClInclude Include="..\src\video\yuv2rgb\yuv_rgb_std_func.h" />
     <ClInclude Include="..\src\video\winrt\SDL_winrtevents_c.h" />
     <ClInclude Include="..\src\video\winrt\SDL_winrtgamebar_cpp.h" />
@@ -301,6 +308,8 @@
     <ClCompile Include="..\src\haptic\windows\SDL_xinputhaptic.c" />
     <ClCompile Include="..\src\hidapi\SDL_hidapi.c" />
     <ClCompile Include="..\src\joystick\controller_type.c" />
+    <ClCompile Include="..\src\joystick\SDL_joystick.c" />
+    <ClCompile Include="..\src\joystick\SDL_steam_virtual_gamepad.c" />
     <ClCompile Include="..\src\joystick\dummy\SDL_sysjoystick.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapijoystick.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_combined.c" />
@@ -313,6 +322,7 @@
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_shield.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_stadia.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_steam.c" />
+    <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_steamdeck.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_switch.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360.c" />
     <ClCompile Include="..\src\joystick\hidapi\SDL_hidapi_xbox360w.c" />
@@ -437,7 +447,6 @@
     <ClCompile Include="..\src\events\SDL_events.c" />
     <ClCompile Include="..\src\video\SDL_fillrect.c" />
     <ClCompile Include="..\src\haptic\SDL_haptic.c" />
-    <ClCompile Include="..\src\joystick\SDL_joystick.c" />
     <ClCompile Include="..\src\events\SDL_keyboard.c" />
     <ClCompile Include="..\src\audio\SDL_mixer.c" />
     <ClCompile Include="..\src\events\SDL_mouse.c" />
@@ -485,7 +494,9 @@
     <ClCompile Include="..\src\video\windows\SDL_windowswindow.c" />
     <ClCompile Include="..\src\events\SDL_windowevents.c" />
     <ClCompile Include="..\src\joystick\SDL_gamecontroller.c" />
-    <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb.c" />
+    <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb_lsx.c" />
+    <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb_sse.c" />
+    <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb_std.c" />
     <ClCompile Include="..\src\video\winrt\SDL_winrtevents.cpp">
       <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
       <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
