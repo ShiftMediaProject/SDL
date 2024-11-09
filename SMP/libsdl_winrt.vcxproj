@@ -91,6 +91,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
     <Link>
       <AdditionalDependencies>vccorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -128,6 +129,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
     <Link>
       <AdditionalDependencies>vccorlibd.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -239,6 +241,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
     <Link>
       <AdditionalDependencies>vccorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include
@@ -276,6 +279,7 @@ del /f /q $(OutDir)\licenses\libsdl.txt
     <Link>
       <AdditionalDependencies>vccorlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/IGNORE:4006,4221,4264 %(AdditionalOptions)</AdditionalOptions>
+      <GenerateWindowsMetadata>true</GenerateWindowsMetadata>
     </Link>
     <PostBuildEvent>
       <Command>mkdir "$(OutDir)"\include

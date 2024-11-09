@@ -238,10 +238,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\audio\wasapi\SDL_wasapi_winrt.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
@@ -252,30 +249,21 @@
     <ClCompile Include="..\src\core\windows\SDL_windows.c" />
     <ClCompile Include="..\src\core\windows\SDL_xinput.c" />
     <ClCompile Include="..\src\core\winrt\SDL_winrtapp_common.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\core\winrt\SDL_winrtapp_direct3d.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\core\winrt\SDL_winrtapp_xaml.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
@@ -293,10 +281,7 @@
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\filesystem\winrt\SDL_sysfilesystem.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
@@ -357,20 +342,14 @@
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\misc\winrt\SDL_sysurl.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\power\winrt\SDL_syspower.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
@@ -381,10 +360,7 @@
     <ClCompile Include="..\src\render\direct3d12\SDL_render_d3d12.c" />
     <ClCompile Include="..\src\render\direct3d12\SDL_shaders_d3d12.c" />
     <ClCompile Include="..\src\render\direct3d11\SDL_render_winrt.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
@@ -498,80 +474,56 @@
     <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb_sse.c" />
     <ClCompile Include="..\src\video\yuv2rgb\yuv_rgb_std.c" />
     <ClCompile Include="..\src\video\winrt\SDL_winrtevents.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtgamebar.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtkeyboard.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtmessagebox.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtmouse.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtopengles.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtpointerinput.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Release'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\src\video\winrt\SDL_winrtvideo.cpp">
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugDLLWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='DebugWinRT'">true</CompileAsWinRT>
-      <CompileAsWinRT Condition="'$(Configuration)'=='ReleaseDLLWinRT'">true</CompileAsWinRT>
+      <CompileAsWinRT>true</CompileAsWinRT>
       <ExcludedFromBuild Condition="'$(Configuration)'=='Debug'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='ReleaseDLL'">true</ExcludedFromBuild>
       <ExcludedFromBuild Condition="'$(Configuration)'=='DebugDLL'">true</ExcludedFromBuild>
